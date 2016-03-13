@@ -1,0 +1,62 @@
+@mixin box-shadow-engine($args...) {
+  @media not print {
+    @include box-shadow($args);
+  }
+}
+
+@mixin shadow-1() {
+  @include box-shadow-engine(0 1px 3px rgba(#000, .12), 0 1px 2px rgba(#000, .24));
+}
+
+@mixin shadow-1-inner() {
+  @include box-shadow-engine(inset 0 1px 3px rgba(#000, .12));
+}
+
+@mixin shadow-2() {
+  @include box-shadow-engine(0 3px 6px rgba(#000, .16), 0 3px 6px rgba(#000, .23));
+}
+
+@mixin shadow-3() {
+  @include box-shadow-engine(0 10px 20px rgba(#000, .19), 0 6px 6px 0 rgba(#000, .23));
+}
+
+@mixin shadow-4() {
+  @include box-shadow-engine(0 14px 28px rgba(#000, .25), 0 10px 10px 0 rgba(#000, .22));
+}
+
+@mixin shadow-5() {
+  @include box-shadow-engine(0 19px 38px rgba(#000, .30), 0 15px 12px 0 rgba(#000, .22));
+}
+
+@mixin shadow-none() {
+  @include box-shadow-engine(none);
+}
+
+
+%shadow-1 {
+  @include shadow-1;
+}
+
+%shadow-1-inner {
+  @include shadow-1-inner;
+}
+
+%shadow-2 {
+  @include shadow-2;
+}
+
+%shadow-3 {
+  @include shadow-3;
+}
+
+%shadow-4 {
+  @include shadow-4;
+}
+
+%shadow-5 {
+  @include shadow-5;
+}
+
+%shadow-none {
+  @include shadow-none;
+}

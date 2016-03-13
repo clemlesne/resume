@@ -1,0 +1,15 @@
+@media print {
+  .resume,
+  .resume__container {
+    margin: 0;
+  }
+
+  .resume {
+    width: auto;
+    height: auto;
+  }
+
+  .resume__container {
+    box-shadow: none;
+  }
+}

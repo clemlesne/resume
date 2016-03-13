@@ -1,0 +1,93 @@
+@mixin transition-in-engine($types) {
+  @include transition($types 120ms linear)
+}
+
+@mixin transition-out-engine($types) {
+  @include transition($types 280ms ease-out)
+}
+
+@mixin transition-in {
+  @include transition-in-engine(all);
+}
+
+@mixin transition-out {
+  @include transition-out-engine(all);
+}
+
+@mixin transition-long-in {
+  @include transition(all 520ms linear);
+}
+
+@mixin transition-long-out {
+  @include transition(all 680ms ease-out);
+}
+
+%transition-in {
+   @include transition-in;
+ }
+
+%transition-out {
+  @include transition-out;
+}
+
+%transition-long-in {
+  @include transition-long-in;
+}
+
+%transition-long-out {
+  @include transition-long-out;
+}
+
+%transition-none {
+  @include transition(none);
+}
+
+%border-radius {
+  @include border-radius(2px);
+}
+
+/**
+* Empêche la sélection d'un contenu par l'utilsiateur, affiche également un pointeur par défaut.
+*/
+%disallow-select {
+  @include user-select(none);
+
+  -webkit-touch-callout: none;
+  cursor: default;
+}
+
+/**
+ * Ajoute 3 petits points après un texte qui dépasse.
+ */
+%text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/**
+ * Gradient après un texte qui dépasse.
+ */
+@mixin text-ellipsis($color) {
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+
+  &:after {
+    @include background(linear-gradient(to right, rgba(#fff, 0), $color) !important);
+
+    content: '' !important;
+    height: inherit !important;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    max-height: 100%;
+    position: absolute;
+    visibility: visible !important;
+    width: 46px;
+  }
+}
+
+%transition-responsive-global {
+  @include transition(all 220ms ease-in);
+}
