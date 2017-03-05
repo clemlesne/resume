@@ -1,4 +1,8 @@
 @media print {
+  body {
+    background: none;
+  }
+
   .resume,
   .resume__container {
     margin: 0;

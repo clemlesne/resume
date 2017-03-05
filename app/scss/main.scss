@@ -4,8 +4,13 @@
 // doc: http://compass-style.org/
 @import "compass";
 
-@import "vendors/reset-html5";
-@import "utils/colors";
+@import "vendors/variables";
+@import "vendors/colors";
+@import "vendors/skel";
+@include skel-layout((
+  grid: ( gutters: $content__margin $content__margin )
+));
+
 @import "utils/snippets";
 @import "utils/shadows";
 

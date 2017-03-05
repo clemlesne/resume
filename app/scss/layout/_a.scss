@@ -1,11 +1,11 @@
 a {
-  color: #424242;
+  color: #212121;
 
   text-decoration: none;
   font-style: italic;
-}
 
-a:hover {
-  color: #2979FF;
-  text-decoration: underline;
+  &:hover {
+    color: #2962FF;
+    text-decoration: underline;
+  }
 }

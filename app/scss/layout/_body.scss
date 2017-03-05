@@ -1,10 +1,4 @@
-body,
-html {
-  background: #424242;
-
-  font-family: 'PT Serif', serif;
-  font-weight: 400;
-  font-size: 12px;
-  color: #263238;
-  text-rendering: geometricPrecision;
+body {
+  background: color('grey', 'darken-4');
+  min-height: 100%;
 }
