@@ -1,5 +1,5 @@
-.idea
-dist
-.sass-cache
-node_modules
-.tmp
+/.tmp/
+/.sass-cache/
+/dist/
+/node_modules/
+/resume.iml

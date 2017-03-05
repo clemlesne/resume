@@ -1,0 +1,43 @@
+{
+  "name": "resume",
+  "version": "1.2.8-prod+1487835660",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/klemy/resume.git"
+  },
+  "author": "Clement Lesne <clem0925@gmail.com>",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/klemy/resume#readme",
+  "dependencies": {
+    "browser-sync": "^2.17.5",
+    "critical": "^0.8.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-data": "^1.2.1",
+    "gulp-dest": "^0.2.3",
+    "gulp-filter": "^4.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-pug": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-replace-task": "^0.11.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-selectors": "^0.1.9",
+    "gulp-shorthand": "^1.1.0",
+    "gulp-uncss": "^1.0.6",
+    "gulp-webp": "^2.3.0",
+    "merge-stream": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp-minify-inline": "^0.2.1"
+  }
+}
