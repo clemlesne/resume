@@ -1,24 +1,31 @@
-$header__margin--v: .9cm;
-$header__padding--bottom: .9cm;
+$resume--padding: 1cm;
+$resume__view--margin: 32px;
+$resume__header--background: #00E676;
+$resume__content--background: #e0e0e0;
+
+$header__margin--v: $resume--padding;
+$header__padding--bottom: $resume--padding;
 $header__main__top__details__icon--margin-h: 7px;
 $header__main__top__details__container--padding: 12px;
 
-$container--header--color: color('green', 'accent-3');
+$container--header--color: $resume__header--background;
 $container__padding--v: $header__margin--v;
-$container__padding--h: 1cm;
+$container__padding--h: $resume--padding;
 
-$content__header__margin: 14px;
 $content__padding: 11px;
+$content__header__margin: $content__padding;
 
 .resume {
-  width: calc(21.0cm + 24px *2);
+  width: calc(21.0cm + #{$resume__view--margin} *2);
   height: 29.7cm;
 
   margin: 0 auto;
 }
 
 .resume__container {
-  @include rem(margin, 24px);
+  @extend %shadow-4;
+
+  @include rem(margin, $resume__view--margin);
 
   display: flex;
   flex-direction: column;
@@ -29,34 +36,36 @@ $content__padding: 11px;
   width: 21.0cm;
   box-sizing: content-box;
 
-  background: color('grey', 'lighten-2');
+  background: $resume__content--background;
   position: relative;
-  overflow: hidden;
-
-  box-shadow: 0 3px 6px rgba(#000 ,.16), 0 3px 6px rgba(#000, .23);
-
-  ::selection {
-    background: rgba($typography__selection--color, .45);
-  }
-
-  ::-moz-selection {
-    background: rgba($typography__selection--color, .45);
-  }
 }
 
 .container {
-  @include rem(padding, $container__padding--v $container__padding--h);
-
   box-sizing: border-box;
 }
 
 .container--header {
-  background: $container--header--color;
-  color: #000;
+  @include rem(padding, $container__padding--v $container__padding--h);
+
+   background: $container--header--color;
+   color: #000;
+  position: relative;
+}
+
+.header__canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
 }
 
 .header__container {
-  @include rem(margin, 0 ($content__padding +1) $header__padding--bottom);
+  @include rem(margin, 0 $content__padding $header__padding--bottom);
+
+  z-index: 1;
+  position: relative;
 
   display: flex;
   flex-direction: row;
@@ -120,36 +129,32 @@ $content__padding: 11px;
   align-items: flex-end;
 }
 
-.header__main__top__details {
+.header__main__top__details__container-0 {
+  @include rem(margin-left, 32px);
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
 
-  flex-grow: 1;
+  * {
+    @include rem(font-size, 11px);
+    @include rem(line-height, 7px);
+  }
 }
 
-.header__main__top__details__container {
+.header__main__top__details__container-1 {
   > div {
     &:not(:last-child) {
-      @include rem(margin-bottom, 6px);
-    }
-  }
-
-  a {
-
-    &,
-    span {
-      @include rem(font-size, 11px);
-      @include rem(line-height, 7px);
+      @include rem(margin-bottom, 3px);
     }
   }
 }
 
-.header__main__top__details__container--left {
+.header__main__top__details__container-1--left {
   @include rem(padding-right, $header__main__top__details__container--padding);
 
-  border-right: 1px solid color('grey', 'darken-4');
+  border-right: 1px solid #333333;
   text-align: right;
 
   > div {
@@ -159,7 +164,7 @@ $content__padding: 11px;
   }
 }
 
-.header__main__top__details__container--right {
+.header__main__top__details__container-1--right {
   @include rem(padding-left, $header__main__top__details__container--padding);
 
   text-align: left;
@@ -172,10 +177,15 @@ $content__padding: 11px;
 }
 
 .header__main__bottom {
-  @include rem(margin-top, 9px);
+  @include rem(margin-top, 15px);
+
+  letter-spacing: .2px;
 }
 
 .container--content {
+  @include rem(margin, $container__padding--v $container__padding--h);
+
+  position: relative;
   flex-grow: 1;
 
   display: flex;
@@ -198,7 +208,8 @@ $content__padding: 11px;
   background: #fff;
   border-radius: 2px;
 
-  border: 1px solid #e0e0e0;
+  margin: -1px;
+  border: 1px solid $resume__content--background;
 
   &:not(:last-child) {
     @include rem(margin-bottom, $content__margin);
@@ -220,7 +231,7 @@ $content__padding: 11px;
       top: calc(50% - 1px);
       width: 100%;
 
-      background: repeating-linear-gradient(-45deg, #66BB6A, #66BB6A 1px, transparent 1px, transparent 3px);
+      background: repeating-linear-gradient(-45deg, $container--header--color, $container--header--color 1px, transparent 1px, transparent 3px);
     }
 
     h2 {
@@ -257,22 +268,18 @@ $content__padding: 11px;
     list-style-type: circle;
     list-style-position: outside;
   }
+}
+
+.table-data__right__content {
+  text-align: justify;
 
   aside {
     @include rem(margin-top, 2px);
   }
 
-  span {
+  i {
     @include rem(margin-right, 4px);
   }
-}
-
-.table-data__right__content {
-  text-align: justify;
-}
-
-.table-data__right__more {
-  color: color('light-blue', 'accent-4');
 }
 
 .content__sub--skills .table-data {
@@ -292,11 +299,19 @@ $content__padding: 11px;
   }
 }
 
-.footer {
+.container--footer {
+  position: absolute;
+  right: $container__padding--v;
+  bottom: $container__padding--v / 2;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 
-  color: color('grey', 'base');
+  color: #999999;
+}
+
+.color--blue {
+  color: #0099ff;
 }

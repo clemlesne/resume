@@ -4,8 +4,7 @@
 // doc: http://compass-style.org/
 @import "compass";
 
-@import "vendors/variables";
-@import "vendors/colors";
+@import "variables";
 @import "vendors/skel";
 @include skel-layout((
   grid: ( gutters: $content__margin $content__margin )

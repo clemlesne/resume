@@ -1,5 +1,5 @@
-$typography__color: color('blue-grey', 'darken-3');
-$typography__selection--color: color('grey', 'lighten-1');
+$typography__color: #333;
+$typography__selection--color: #cccccc;
 
 ::selection {
   background: rgba($typography__selection--color, .45);
@@ -10,16 +10,13 @@ $typography__selection--color: color('grey', 'lighten-1');
 }
 
 body {
+  @include rem(font-size, 11px);
+
   font-family: 'Average', serif;
   font-weight: 400;
   text-rendering: geometricPrecision;
   color: $typography__color;
-}
-
-a,
-p,
-body{
-  @include rem(font-size, 11px);
+  letter-spacing: .1px;
 }
 
 small {
