@@ -1,7 +1,8 @@
 $resume--padding: 1cm;
 $resume__view--margin: 32px;
-$resume__header--background: #00E676;
-$resume__content--background: #e0e0e0;
+$resume__header--background: #55C26C;
+$resume__content--background: #DDE0DF;
+$resume__footer--color: #B5BAB6;
 
 $header__margin--v: $resume--padding;
 $header__padding--bottom: $resume--padding;
@@ -309,9 +310,9 @@ $content__header__margin: $content__padding;
   align-items: center;
   justify-content: space-between;
 
-  color: #999999;
+  color: $resume__footer--color;
 }
 
 .color--blue {
-  color: #0099ff;
+  color: #3F60B8;
 }

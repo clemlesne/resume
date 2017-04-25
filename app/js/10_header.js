@@ -1,8 +1,8 @@
 (function () {
 
-    var width, height, largeHeader, canvas, ctx, points, target,
+    var width, height, largeHeader, canvas, ctx, points, target, imageHeader,
         animateHeader = true,
-        circleColor = "132,255,195",
+        circleColor = "172,225,183",
         lineColor = circleColor,
         alphaGlobal = 1;
 
@@ -12,10 +12,14 @@
 
     function initHeader() {
         largeHeader = document.getElementById('container--header');
+        imageHeader = document.getElementById('header__image');
 
         width = largeHeader.clientWidth;
         height = largeHeader.clientHeight;
-        target = {x: width / 6, y: height / 2};
+        target = {
+            x: width * .15,
+            y: height / 2
+        };
 
         canvas = document.getElementById('header__canvas');
         canvas.width = width;
