@@ -1,4 +1,5 @@
-$typography__color: #3f4f5e;
+$typography--color: #212121;
+$typography__headers--color: #000;
 $typography__selection--color: #cccccc;
 
 ::selection {
@@ -15,7 +16,7 @@ body {
   font-family: 'Average', serif;
   font-weight: 400;
   text-rendering: geometricPrecision;
-  color: $typography__color;
+  color: $typography--color;
   letter-spacing: .1px;
 }
 
@@ -23,6 +24,11 @@ small {
   @include rem(margin, 0 4px);
   @include rem(font-size, 15px);
   @include rem(line-height, 10px);
+}
+
+h1,
+h2 {
+  color: $typography__headers--color;
 }
 
 h1 {

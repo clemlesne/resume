@@ -9,3 +9,10 @@ a {
     text-decoration: underline;
   }
 }
+
+@media print {
+  a {
+    font-style: normal !important;
+    text-decoration: none !important;
+  }
+}

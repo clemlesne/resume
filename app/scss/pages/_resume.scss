@@ -1,8 +1,12 @@
+$color--1: #40E0D0;
+$color--2: #e04050;
+$color--3: #019875;
+
 $resume--padding: 1cm;
 $resume__view--margin: 32px;
-$resume__header--background: #55C26C;
-$resume__content--background: #DDE0DF;
-$resume__footer--color: #B5BAB6;
+$resume__header--background: $color--1;
+$resume__content--background: #dee0de;
+$resume__footer--color: #b7bbb7;
 
 $header__margin--v: $resume--padding;
 $header__padding--bottom: $resume--padding;
@@ -13,7 +17,7 @@ $container--header--color: $resume__header--background;
 $container__padding--v: $header__margin--v;
 $container__padding--h: $resume--padding;
 
-$content__padding: 11px;
+$content__padding: 12px;
 $content__header__margin: $content__padding;
 
 .resume {
@@ -85,7 +89,7 @@ $content__header__margin: $content__padding;
 
   &,
   img {
-    border-radius: 2px;
+    @extend %border-radius;
   }
 
   img {
@@ -94,23 +98,29 @@ $content__header__margin: $content__padding;
   }
 }
 
-.header__image--head {
+.header__image {
+  background: #fff;
+}
 
+.header__image--head {
   &,
   img {
     border-radius: 50%;
   }
 
   img {
-    height: 2.2cm;
+    height: 2.1cm;
   }
 }
 
-.header__image--cert {
-  background: #fff;
+.header__image--aside {
+  &,
+  img {
+    @extend %border-radius;
+  }
 
   img {
-    height: 1.7cm;
+    height: 1.6cm;
   }
 }
 
@@ -131,7 +141,7 @@ $content__header__margin: $content__padding;
 }
 
 .header__main__top__details__container-0 {
-  @include rem(margin-left, 32px);
+  @include rem(margin-left, 24px);
 
   display: flex;
   align-items: center;
@@ -193,10 +203,6 @@ $content__header__margin: $content__padding;
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-
-  a {
-    text-decoration: underline;
-  }
 }
 
 .content__container {
@@ -204,10 +210,11 @@ $content__header__margin: $content__padding;
 }
 
 .content {
+  @extend %border-radius;
+
   @include rem(padding, $content__padding $content__padding);
 
   background: #fff;
-  border-radius: 2px;
 
   margin: -1px;
   border: 1px solid $resume__content--background;
@@ -286,17 +293,11 @@ $content__header__margin: $content__padding;
 .content__sub--skills .table-data {
 
   .table-data__left {
-    width: 50%;
+    width: 35%;
   }
 
   .table-data__right {
-    span {
-      @include rem(font-size, 15px);
 
-      &:not(:last-child) {
-        @include rem(margin-right, 4px);
-      }
-    }
   }
 }
 
@@ -314,5 +315,5 @@ $content__header__margin: $content__padding;
 }
 
 .color--blue {
-  color: #3F60B8;
+  color: $color--2;
 }

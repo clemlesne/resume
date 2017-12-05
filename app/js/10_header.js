@@ -2,9 +2,9 @@
 
     var width, height, largeHeader, canvas, ctx, points, target, imageHeader,
         animateHeader = true,
-        circleColor = "172,225,183",
+        circleColor = "255,255,255",
         lineColor = circleColor,
-        alphaGlobal = 1;
+        alphaGlobal = .4;
 
     // Main
     initHeader();
@@ -12,7 +12,7 @@
 
     function initHeader() {
         largeHeader = document.getElementById('container--header');
-        imageHeader = document.getElementById('header__image');
+        imageHeader = document.getElementById('header__image--head');
 
         width = largeHeader.clientWidth;
         height = largeHeader.clientHeight;

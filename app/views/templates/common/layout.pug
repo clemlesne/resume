@@ -8,7 +8,7 @@ html(lang='fr-FR')
         link(rel="profile" href="http://gmpg.org/xfn/11")
         meta(name="viewport" content="width=device-width, initial-scale=1")
 
-        title Résumé &middot; LESNÉ Clément
+        title LESNÉ &middot; Résumé !{headerTitle}
 
         link(rel='stylesheet', href='css/app.css')
 
@@ -25,8 +25,9 @@ html(lang='fr-FR')
                         .row
                             block content
 
-                .container.container--footer
-                    span
-                    p v@@version
+                if footerVersion
+                    .container.container--footer
+                        span
+                        p v@@version
         span(style="display:none;")
             script(src='js/app.js')

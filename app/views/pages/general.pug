@@ -1,7 +1,9 @@
 extend ../templates/common/layout
 
 block vars
-    - var headerMainBottom = "<strong>Cherche emploi à plein-temps sur Le Havre d'avril 2017 à août 2017</strong></br>Possibilité de contrat étudiant à partir de septembre 2017"
+    - var headerTitle = "général"
+    - var headerMainBottom = ""
+    - var footerVersion = false
 
 block header__image
 
@@ -12,6 +14,26 @@ block content
                 h2 Expériences professionnelles
             table.table-data
                 tbody
+                    tr
+                        td.table-data__left
+                            h4 2017 (en cours)
+                        td: div.table-data__right
+                            h3 Service Civique à la Ligue de l'Enseignement de Seine-Maritime
+                            .table-data__right__content
+                                ul
+                                    li Travail autour du dispositif Junior Association : rencontres, formation, promotion, 20 ans du réseau ;
+                                    li Promotion de la citoyenneté dans les établissements primaires et secondaires Havrais ;
+                                    li Mise en place d'action de santé dans le périmètre d'implantation physique de la structure.
+                    tr
+                        td.table-data__left
+                            h4 2017 (juillet à octobre)
+                        td: div.table-data__right
+                            h3 Animateur à l'hôtel NOMAD Le Havre Gare
+                            .table-data__right__content
+                                ul
+                                    li Tenue du standard et réception d'un hôtel de 106 chambres - 2 à 4 collaborateurs /shift ;
+                                    li Gestion du quotidien de la réception (accueil clients individuels, groupes, français & internationaux) ;
+                                    li Service en bar, petits déjeuners et dîners.
                     tr
                         td.table-data__left
                             h4 2016 (2 mois)
@@ -25,10 +47,7 @@ block content
                                         | Dans le cadre d'un séjour de deux mois à Minneapolis (à l'
                                         em University of Minnesota Twin Cities
                                         | ) ;
-                                    li Création et discussion d'un cahier des charges fonctionnel
-                                aside.color--blue
-                                    i.fa.fa-check
-                                    | Langue Anglaise, Immersion complète, Polyvalence, Communication avec des professeurs et universitaires
+                                    li Création et discussion d'un cahier des charges fonctionnel universitaires
                     tr
                         td.table-data__left
                             h4 2016 (2 mois)
@@ -38,9 +57,6 @@ block content
                                 ul
                                     li Aide au développement de l'application (méthode agile) ;
                                     li Discussion d'un cahier des charges
-                                aside.color--blue
-                                    i.fa.fa-check
-                                    | Travail d'équipe, Numérique, Communication
 
     div(class='12u')
         section.content
@@ -67,9 +83,6 @@ block content
                                     li Issu d'une liste pour défendre les intérêts moraux et matériaux des étudiants ;
                                     li Représentant des 65.000 étudiants Normands en études supérieures ;
                                     li Participe à l'élaboration de contribution et porte des motions au niveau du conseil pour orienter les objectifs politiques de la ComUE.
-                                aside.color--blue
-                                    i.fa.fa-check
-                                    | Transformer un projet politique en actions concrètes, Assiduité, Travail d'équipe
                     tr
                         td.table-data__left
                             h4 2016 (en cours)
@@ -80,9 +93,6 @@ block content
                                     li Représentant légal de l'organisation devant les institutions, les partenaires, et les médias ;
                                     li Gestion de commissions, d'élus, et management d'une équipe de 14 bénévoles ;
                                     li Responsable de l’application de la politique générale votée annuellement par le conseil d’administration.
-                                aside.color--blue
-                                    i.fa.fa-check
-                                    | Projet politique, Stratégies d'influence, Vérification de sources, Polyvalence
 
     div(class='5u')
         section.content
@@ -94,49 +104,14 @@ block content
                     tbody
                         tr
                             td.table-data__left
-                                h4 Relationnel d'équipe
+                                h4 Qualités humaines
                             td: div.table-data__right
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
+                                p Travail d'équipe, Ponctualité, Maîtrise de soi, Remise en question, Vérification de sources, Polyvalence
                         tr
                             td.table-data__left
-                                h4 Remise en question
+                                h4 Langues
                             td: div.table-data__right
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                        tr
-                            td.table-data__left
-                                h4 Adaptation
-                            td: div.table-data__right
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star-o
-                        tr
-                            td.table-data__left
-                                h4 Anglais
-                            td: div.table-data__right
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star-o
-                                span.fa.fa-star-o
-                        tr
-                            td.table-data__left
-                                h4 Espagnol
-                            td: div.table-data__right
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star.color--blue
-                                span.fa.fa-star-o
-                                span.fa.fa-star-o
-                                span.fa.fa-star-o
+                                p Anglais B2, Espagnol
 
             article.content__sub.content__sub--certifications
                 header
@@ -147,12 +122,12 @@ block content
                             td.table-data__left
                                 h4 2016
                             td: div.table-data__right
-                                h3 Oracle Certified Associate, Java SE 8 Programmer
+                                h3: a(href='http://bit.ly/clementlesne-cert-oracle-1') Oracle Certified Associate, Java SE 8 Programmer
                         tr
                             td.table-data__left
                                 h4 2016
                             td: div.table-data__right
-                                h3 Google, Digital Active
+                                h3: a(href='http://bit.ly/clementlesne-cert-google-1') Google, Digital Active
 
     div(class='7u')
         section.content
