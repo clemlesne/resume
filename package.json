@@ -1,6 +1,6 @@
 {
   "name": "resume",
-  "version": "1.2.9-prod+1492422060",
+  "version": "1.2.9-prod+1515145260",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+ssh://git@bitbucket.org/klemy/resume.git"
   },
-  "author": "Clement Lesne <clem0925@gmail.com>",
+  "author": "Clement Lesne <clementlesne.cl@gmail.com>",
   "license": "ISC",
   "homepage": "https://bitbucket.org/klemy/resume#readme",
   "dependencies": {
