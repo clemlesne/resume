@@ -170,7 +170,7 @@ $content__header__margin: $content__padding;
 
   > div {
     span {
-      @include rem(margin-left, $header__main__top__details__icon--margin-h);
+      @include rem(margin-right, $header__main__top__details__icon--margin-h);
     }
   }
 }
@@ -182,7 +182,7 @@ $content__header__margin: $content__padding;
 
   > div {
     span {
-      @include rem(margin-right, $header__main__top__details__icon--margin-h);
+      @include rem(margin-left, $header__main__top__details__icon--margin-h);
     }
   }
 }
