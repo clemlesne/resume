@@ -223,7 +223,6 @@ gulp.task('js__app', function () {
                 hoist_vars: true,
                 if_return: true,
                 join_vars: true,
-                cascade: true,
                 collapse_vars: true,
                 reduce_vars: true,
                 negate_iife: true,
