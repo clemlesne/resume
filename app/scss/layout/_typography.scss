@@ -33,7 +33,7 @@ h2 {
 
 h1 {
   @include rem(font-size, 26px);
-  @include rem(line-height, 18px);
+  @include rem(line-height, 20px);
 
   font-weight: 700;
 }
