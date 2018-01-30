@@ -10,14 +10,24 @@ $typography__selection--color: #cccccc;
   background: rgba($typography__selection--color, .45);
 }
 
+%font--base {
+  font-family: 'Average', serif;
+  letter-spacing: .1px;
+}
+
+%font--second {
+  font-family: 'Kalam', serif;
+  letter-spacing: 0;
+}
+
 body {
+  @extend %font--base;
+
   @include rem(font-size, 11px);
 
-  font-family: 'Average', serif;
   font-weight: 400;
   text-rendering: geometricPrecision;
   color: $typography--color;
-  letter-spacing: .1px;
 }
 
 small {

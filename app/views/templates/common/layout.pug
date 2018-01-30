@@ -31,10 +31,16 @@ html(lang='fr-FR')
                         .row
                             block content
 
-                if footerVersion
-                    .container.container--footer
+                .container.container--footer(class=qrcodeIsLeft ? 'container--footer--left' : 'container--footer--right')
+                    span.container--footer__qrcode
+                        figure: img(src='img/qrcode.svg?v=@@version')
                         span
-                        p v@@version
+                            span.fas.fa-long-arrow-alt-left
+                            span.fas.fa-long-arrow-alt-right
+                            | &nbsp;Scannez ce code pour en savoir plus !
+                    span
+                        if footerVersion
+                            p v@@version
 
         span(style="display:none;")
             noscript: link(href='css/app.css?v=@@version', rel='stylesheet')
@@ -60,7 +66,7 @@ html(lang='fr-FR')
             script.
                 WebFontConfig = {
                     google: {
-                        families: ['Average:400'],
+                        families: ['Average:400', 'Kalam:400'],
                     },
                     timeout: 5000,
                     events: false

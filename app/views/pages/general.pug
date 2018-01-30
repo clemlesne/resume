@@ -1,192 +1,189 @@
 extend ../templates/common/layout
 
 block vars
-    - var headerTitle = "général"
+    - var headerTitle = 'général'
     - var headerMainBottom = ""
     - var footerVersion = false
+    - var qrcodeIsLeft = true
 
 block header__image
 
 block content
     div(class='12u')
-        section.content
+        section.content.content--horizontal
             header
                 h2 Expériences professionnelles
-            table.table-data
+            table
                 tbody
                     tr
-                        td.table-data__left
-                            h4 2017 (en cours)
-                        td: div.table-data__right
-                            h3 Service Civique à la Ligue de l'Enseignement de Seine-Maritime
-                            .table-data__right__content
+                        td: h4 2018 (juill. à févr.)
+                        td: div
+                            h3
+                                figure: span: a(href='http://ligue76.fr', target='_blank'): img(src='img/structures/ligue76.png?version=@@version')
+                                span Service Civique à la Ligue de l'Enseignement de Seine-Maritime
+                            div
                                 ul
                                     li Travail autour du dispositif Junior Association : rencontres, formation, promotion, 20 ans du réseau ;
-                                    li Promotion de la citoyenneté dans les établissements primaires et secondaires Havrais ;
-                                    li Mise en place d'action de santé dans le périmètre d'implantation physique de la structure.
+                                    li Promotion de la citoyenneté dans les établissements.
                     tr
-                        td.table-data__left
-                            h4 2017 (juillet à octobre)
-                        td: div.table-data__right
-                            h3 Animateur à l'hôtel NOMAD Le Havre Gare
-                            .table-data__right__content
+                        td: h4 2017 (juill. à oct.)
+                        td: div
+                            h3
+                                figure: span: a(href='http://www.nomad-hotels.com/16-NOMAD-LE-HAVRE.htm', target='_blank'): img(src='img/structures/nomad.png?version=@@version')
+                                span Responsable des ventes à l'hôtel NOMAD Le Havre
+                            div
                                 ul
                                     li Tenue du standard et réception d'un hôtel de 106 chambres - 2 à 4 collaborateurs /shift ;
-                                    li Gestion du quotidien de la réception (accueil clients individuels, groupes, français & internationaux) ;
-                                    li Service en bar, petits déjeuners et dîners.
+                                    li Accueil des groupes internationaux.
                     tr
-                        td.table-data__left
-                            h4 2016 (2 mois)
-                        td: div.table-data__right
+                        td: h4 2016 (juill. à août)
+                        td: div
                             h3
-                                | Site web et communication d'un&nbsp;
-                                a(href='http://lesnelab.neuroscience.umn.edu', target='_blank') laboratoire universitaire de recherche Américain
-                            .table-data__right__content
+                                figure: span: a(href='https://thelesnelab.org', target='_blank'): img(src='img/structures/thelesnelab.png?version=@@version')
+                                span
+                                    | Site web et communication du laboratoire universitaire de recherche Américain spécialisé sur Alzheimer
+                            div
                                 ul
                                     li
-                                        | Dans le cadre d'un séjour de deux mois à Minneapolis (à l'
+                                        | Séjour de deux mois à Minneapolis (
                                         em University of Minnesota Twin Cities
-                                        | ) ;
-                                    li Création et discussion d'un cahier des charges fonctionnel universitaires
+                                        | ).
                     tr
-                        td.table-data__left
-                            h4 2016 (2 mois)
-                        td: div.table-data__right
+                        td: h4 2016 (janv. à mars)
+                        td: div
                             h3
-                                | Application d'audit pour&nbsp;
-                                a(href='https://www.cunninghamlindsey.com/global', target='_blank') Cunningham Lindsey
-                            .table-data__right__content
+                                figure: span: a(href='https://www.cunninghamlindsey.com/global', target='_blank'): img(src='img/structures/cunningham-lindsey.png?version=@@version')
+                                span Application d'audit pour la compagnie d'assurance Cunningham Lindsey
+                            div
                                 ul
-                                    li Aide au développement de l'application (méthode agile) ;
-                                    li Discussion d'un cahier des charges
+                                    li Aide au développement de l'application ;
+                                    li Discussion du cahier des charges.
 
     div(class='12u')
-        section.content
+        section.content.content--vertical
             header
                 h2 Projets associatifs et culturels
-            table.table-data
+            table
                 tbody
                     tr
-                        td.table-data__left
-                            h4 2017 (en cours)
-                        td: div.table-data__right
-                            h3 Expert à la Commission Pédagogique Nationale Informatique / Réseau IUT
-                            .table-data__right__content
+                        td: h4 2017 (en cours)
+                        td: div
+                            h3
+                                figure: span: a(href='https://www.enseignementsup-recherche.gouv.fr', target='_blank'): img(src='img/structures/mesri.jpg?version=@@version')
+                                span Membre de la Commission Pédagogique Nationale Informatique / Réseau IUT
+                            div
                                 ul
                                     li Commission Nationale en charge des questions sur les DUT INFO et STID ;
                                     li Conduite des évaluations et accréditations des départements pour ces diplômes.
                     tr
-                        td.table-data__left
-                            h4 2017 (en cours)
-                        td: div.table-data__right
-                            h3 Représentant au CA de la Communauté d'Universités et Établissements de Normandie
-                            .table-data__right__content
+                        td: h4 2017 (mars à sept.)
+                        td: div
+                            h3
+                                figure: span: a(href='http://www.normandie-univ.fr', target='_blank'): img(src='img/structures/comue-normandie.png?version=@@version')
+                                span Membre du CA de la Communauté d'Universités et Établissements de Normandie
+                            div
                                 ul
                                     li Issu d'une liste pour défendre les intérêts moraux et matériaux des étudiants ;
                                     li Représentant des 65.000 étudiants Normands en études supérieures ;
-                                    li Participe à l'élaboration de contribution et porte des motions au niveau du conseil pour orienter les objectifs politiques de la ComUE.
+                                    li Participe à l'élaboration de contribution et porte des motions pour orienter ses objectifs politiques.
                     tr
-                        td.table-data__left
-                            h4 2016 (déc. à sept.)
-                        td: div.table-data__right
-                            h3 Président de la Fédération des Associations Étudiantes du Havre (FED'LH)
-                            .table-data__right__content
+                        td: h4 2017 (déc. à sept.)
+                        td: div
+                            h3
+                                figure: span: a(href='https://fedlh.fr', target='_blank'): img(src='img/structures/fedlh.png?version=@@version')
+                                span Président de la Fédération des Associations Étudiantes du Havre
+                            div
                                 ul
                                     li Représentant légal de l'organisation devant les institutions, les partenaires, et les médias ;
                                     li Gestion de commissions, d'élus, et management d'une équipe de 14 bénévoles ;
                                     li Responsable de l’application de la politique générale votée annuellement par le conseil d’administration.
 
     div(class='5u')
-        section.content
-            article.content__sub.content__sub--skills
+        section.content.content--vertical
+            article.content--vertical__sub.content--vertical__sub--skills
                 header
                     h2 Compétences
 
-                table.table-data
+                table
                     tbody
                         tr
-                            td.table-data__left
-                                h4 Qualités humaines
-                            td: div.table-data__right
-                                p Travail d'équipe, Ponctualité, Maîtrise de soi, Remise en question, Vérification de sources, Polyvalence
+                            td
+                                h4 Qualités
+                            td: div
+                                p Organisation de projet, Analyse de système, Gestion des risques, Vérification de sources, Synthèse
                         tr
-                            td.table-data__left
+                            td
                                 h4 Langues
-                            td: div.table-data__right
+                            td: div
                                 p Anglais B2, Espagnol
 
-            article.content__sub
+            article.content--vertical__sub
                 header
                     h2 Certifications
-                table.table-data
+                table
                     tbody
                         tr
-                            td.table-data__left
+                            td
                                 h4 2016
-                            td: div.table-data__right
+                            td: div
                                 h3: a(href='http://bit.ly/clementlesne-cert-oracle-1') Oracle Certified Associate, Java SE 8 Programmer
                         tr
-                            td.table-data__left
+                            td
                                 h4 2016
-                            td: div.table-data__right
+                            td: div
                                 h3: a(href='http://bit.ly/clementlesne-cert-google-1') Google, Digital Active
 
-            article.content__sub
+            article.content--vertical__sub
                 header
                     h2 Distinction
-                table.table-data
+                table
                     tbody
                         tr
-                            td.table-data__left
+                            td
                                 h4 2017
-                            td: div.table-data__right
+                            td: div
                                 h3: a(href='https://www.engagement.fr/wp-content/uploads/2017/11/Liste-des-candidats-admis-automne-2017.pdf') Lauréat, Institut de l'Engagement
 
     div(class='7u')
-        section.content
+        section.content.content--vertical
             header
                 h2 Formation
-            table.table-data
+            table
                 tbody
                     tr
-                        td.table-data__left
-                            h4
+                        td: h4
                                 | 2015-2017
                                 br
                                 | (2 ans)
-                        td: div.table-data__right
+                        td: div
                             h3 IUT Informatique
-                            .table-data__right__content
+                            div
                                 ul
                                     li Institut Universitaire de Technologie du Havre
                     tr
-                        td.table-data__left
-                            h4 2015
-                        td: div.table-data__right
-                            h3 BAC Scientifique option Informatique et Sciences du Numérique
-                            .table-data__right__content
+                        td: h4 2015
+                        td: div
+                            h3 BAC Scientifique spécialité Informatique et Sciences du Numérique
+                            div
                                 ul
                                     li Lycée Assomption, Rennes
 
-        section.content
+        section.content.content--vertical
             header
                 h2 Divers
-            table.table-data
+            table
                 tbody
                     tr
-                        td.table-data__left
-                            h4 Passions
-                        td: div.table-data__right
+                        td: h4 Passions
+                        td: div
                             h3
                                 | Equitation (galop 6, bénévolat),
                                 | Lectures scientifiques &amp; presse internationale
                     tr
-                        td.table-data__left
-                            h4 Sports
-                        td: div.table-data__right
-                            h3 Natation: nageur confirmé (1x par semaine), Basketball
+                        td: h4 Sports
+                        td: div
+                            h3 Natation (nageur confirmé, 1x par semaine), Basketball
                     tr
-                        td.table-data__left
-                            h4 Brevets
-                        td: div.table-data__right
+                        td: h4 Brevets
+                        td: div
                             h3 Permis B, PSC1

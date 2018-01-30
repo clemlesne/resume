@@ -1,0 +1,68 @@
+@function px($size) {
+  @return convert-length($size, px);
+}
+
+@function rem($size) {
+  @return convert-length($size, rem);
+}
+
+/**
+ * clamp
+ * Uses:
+ * clamp(4, 1, 3)
+ *  - 4 clamped to 1-3 equals 3.
+ * clamp(5, 1, 10)
+ *  - -5 clamped to 1-10 equals 1.
+ * clamp(42, 10, 42)
+ *  - 42 clamped to 10-100 equals 42.
+ *
+ */
+@function clamp($value, $min, $max) {
+  @return if($value > $max, $max, if($value < $min, $min, $value));
+
+}
+
+/**
+ * import-once
+ * Uses:
+ * @if import-once("_SharedBaseStuff.scss" ) {
+ *     /=> ...declare stuff that will only be imported once...
+ * }
+ *
+ */
+$imported-once-files: ();
+
+@function import-once($filename) {
+  @if index($imported-once-files, $filename) {
+    @return false;
+  }
+
+  $imported-once-files: append($imported-once-files, $filename);
+  @return true;
+
+}
+
+/**
+ * match
+ * Uses:
+ * $list: a b, c d, e f;
+ * $value: match($list, e); /=> returns f
+ * $value: match($list, b); /=> returns a
+ * $value: match($list, z); /=> returns false
+ *
+ */
+@function match($haystack, $needle) {
+
+  @each $item in $haystack {
+    $index: index($item, $needle);
+
+    @if $index {
+      $return: if($index == 1, 2, $index);
+      @return nth($item, $return);
+    }
+
+  }
+
+  @return false;
+
+}

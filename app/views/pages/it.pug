@@ -1,9 +1,10 @@
 extend ../templates/common/layout
 
 block vars
-    - var headerTitle = "informatique"
-    - var headerMainBottom = "<strong>Développeur JAVA / Web</strong>"
+    - var headerTitle = 'informatique'
+    - var headerMainBottom = "Entrepreneur, autodidacte, passionné, j'ai déjà réalisé de nombreux projets digitaux."
     - var footerVersion = true
+    - var qrcodeIsLeft = false
 
 block header__image
     aside.header__image.header__image--aside
@@ -11,216 +12,199 @@ block header__image
 
 block content
     div(class='12u')
-        section.content
+        section.content.content--horizontal
             header
                 h2 Expériences professionnelles
-            table.table-data
+            table
                 tbody
                     tr
-                        td.table-data__left
-                            h4 2015 (en cours)
-                        td: div.table-data__right
-                            h3 Entrepreneur dans le web et le marketing digital
-                            .table-data__right__content
+                        td: h4 2017 (1 mois)
+                        td: div
+                            h3 Accompagnement à l'expression de besoins
+                            div
+                                ul
+                                    li Application de monnaie virtuelle.
+                    tr
+                        td: h4 2016 (janv. à mars)
+                        td: div
+                            h3
+                                figure: span: a(href='https://www.cunninghamlindsey.com/global', target='_blank'): img(src='img/structures/cunningham-lindsey.png?version=@@version')
+                                span Application d'audit pour la compagnie d'assurance Cunningham Lindsey
+                            div
+                                ul
+                                    li Aide au développement de l'application ;
+                                    li Discussion du cahier des charges.
+                    tr
+                        td: h4 2015 (en cours)
+                        td: div
+                            h3
+                                figure: span: a(href='https://clementlesne.xyz', target='_blank'): img(src='img/structures/ecl.png?version=@@version')
+                                span Entrepreneur web et marketing digital
+                            div
                                 ul
                                     li Mise en place de solutions web (Node.js, PHP, JEE) et audit de communication internet/externe ;
                                     li Hébergement des solutions avec Google Cloud et/ou serveur dédié.
                     tr
-                        td.table-data__left
-                            h4 2017 (1 mois)
-                        td: div.table-data__right
-                            h3 Accompagnement à l'expression de besoins
-                            .table-data__right__content
-                                ul
-                                    li Application de monnaie virtuelle.
-                    tr
-                        td.table-data__left
-                            h4 2016 (2 mois)
-                        td: div.table-data__right
+                        td: h4 2013 - 2015
+                        td: div
                             h3
-                                | Application d'audit pour&nbsp;
-                                a(href='https://www.cunninghamlindsey.com/global', target='_blank') Cunningham Lindsey
-                            .table-data__right__content
+                                figure: span: img(src='img/structures/intercraft.png?version=@@version')
+                                span Serveur de jeu communautaire Minecraft
+                            div
                                 ul
-                                    li Développeur full-stack.
-                    tr
-                        td.table-data__left
-                            h4 2015 (3 mois)
-                        td: div.table-data__right
-                            h3
-                                | Design web, template & composants&nbsp;
-                                a(href='https://www.primefaces.org/', target='_blank') PrimeFaces
-                            .table-data__right__content
-                                ul
-                                    li
-                                        | Réalisation et revente d’une interface et de composants&nbsp;
-                                        a(href='https://www.primefaces.org/', target='_blank') JSF Primefaces
-                                        | .
+                                    li Equipe de 4 pers., ~200 joueurs actifs, développeur full-stack ;
+                                    li Administrateur système de trois serveurs dédiés.
 
     div(class='12u')
-        section.content
+        section.content.content--vertical
             header
                 h2 Projets personnels
-            table.table-data
+            table
                 tbody
                     tr
-                        td.table-data__left
-                            h4 2016 (2 mois)
-                        td: div.table-data__right
+                        td: h4 2016 (juill. à août)
+                        td: div
                             h3
-                                | Site web et communication d'un&nbsp;
-                                a(href='http://lesnelab.neuroscience.umn.edu', target='_blank') laboratoire universitaire de recherche Américain
-                            .table-data__right__content
+                                figure: span: a(href='https://thelesnelab.org', target='_blank'): img(src='img/structures/thelesnelab.png?version=@@version')
+                                span Site web et communication du laboratoire universitaire de recherche Américain spécialisé sur Alzheimer
+                            div
                                 ul
                                     li
-                                        | Dans le cadre d'un séjour de deux mois à Minneapolis (à l'
+                                        | Séjour de deux mois à Minneapolis (
                                         em University of Minnesota Twin Cities
                                         | ).
                     tr
-                        td.table-data__left
-                            h4 2015 (6 mois)
-                        td: div.table-data__right
-                            h3 Projet BAC ISN
-                            .table-data__right__content
+                        td: h4 2015 (6 mois)
+                        td: div
+                            h3 Projet de spécialité BAC Informatique et Sciences du Numérique
+                            div
                                 ul
                                     li Développement d’un système de gestion d’absence JEE/JSF.
-                    tr
-                        td.table-data__left
-                            h4 2013 - 2015
-                        td: div.table-data__right
-                            h3 Serveur de jeu communautaire Minecraft
-                            .table-data__right__content
-                                ul
-                                    li Equipe de 4 pers., ~200 joueurs actifs, développeur full-stack et administrateur système.
 
     div(class='12u')
-        section.content
+        section.content.content--vertical
             header
                 h2 Projets associatifs et culturels
-            table.table-data
+            table
                 tbody
                     tr
-                        td.table-data__left
-                            h4 2017 - 2018 (juill. à févr.)
-                        td: div.table-data__right
-                            h3 Service Civique à la Ligue de l'Enseignement
-                            .table-data__right__content
+                        td: h4 2018 (juill. à févr.)
+                        td: div
+                            h3
+                                figure: span: a(href='http://ligue76.fr', target='_blank'): img(src='img/structures/ligue76.png?version=@@version')
+                                span Service Civique à la Ligue de l'Enseignement de Seine-Maritime
+                            div
                                 ul
                                     li Travail autour du dispositif Junior Association : rencontres, formation, promotion, 20 ans du réseau ;
-                                    li Promotion de la citoyenneté dans les établissements primaires et secondaires Havrais.
+                                    li Promotion de la citoyenneté dans les établissements.
                     tr
-                        td.table-data__left
-                            h4 2017 (en cours)
-                        td: div.table-data__right
-                            h3 Membre de la Commission Pédagogique Nationale Informatique / Réseau IUT
-                    tr
-                        td.table-data__left
-                            h4 2017 (déc. à sept.)
-                        td: div.table-data__right
-                            h3 Président de la Fédération des Associations Étudiantes du Havre (FED'LH)
-                            .table-data__right__content
-                                ul
-                                    li Manager d'une équipe de 14 personnes et d'un réseau de 13 associations.
+                        td: h4 2017 (en cours)
+                        td: div
+                            h3
+                                figure: span: a(href='https://www.enseignementsup-recherche.gouv.fr', target='_blank'): img(src='img/structures/mesri.jpg?version=@@version')
+                                span Membre de la Commission Pédagogique Nationale Informatique / Réseau IUT
 
     div(class='5u')
-        section.content
-            article.content__sub.content__sub--skills
+        section.content.content--vertical
+            article.content--vertical__sub.content--vertical__sub--skills
                 header
                     h2 Compétences
 
-                table.table-data
+                table
                     tbody
                         tr
-                            td.table-data__left
+                            td
+                                h4 Qualités
+                            td: div
+                                p Organisation de projet, Analyse de système, Gestion des risques, Vérification de sources, Synthèse
+                        tr
+                            td
                                 h4 Langages
-                            td: div.table-data__right
+                            td: div
                                 p JAVA/JEE/JSF, HTML5/CSS3, ES6-7, Google AMP, Bash
                         tr
-                            td.table-data__left
+                            td
                                 h4 Middlewares
-                            td: div.table-data__right
-                                p NGINX, AWS, Hyper-V, JSF, JBoss, Hibernate, Symfony, MySQL, MongoDB
+                            td: div
+                                p NGINX, AWS, JSF, JBoss, Hibernate, Symfony, MySQL, MongoDB
                         tr
-                            td.table-data__left
+                            td
                                 h4 OSs
-                            td: div.table-data__right
+                            td: div
                                 p Linux (Debian), Windows
                         tr
-                            td.table-data__left
+                            td
                                 h4 Langues
-                            td: div.table-data__right
-                                p Anglais B2, Espagnol
+                            td: div
+                                p Anglais (B2), Espagnol
 
-            article.content__sub
+            article.content--vertical__sub
                 header
                     h2 Certifications
-                table.table-data
+                table
                     tbody
                         tr
-                            td.table-data__left
+                            td
                                 h4 2016
-                            td: div.table-data__right
+                            td: div
                                 h3: a(href='http://bit.ly/clementlesne-cert-oracle-1') Oracle Certified Associate, Java SE 8 Programmer
                         tr
-                            td.table-data__left
+                            td
                                 h4 2016
-                            td: div.table-data__right
+                            td: div
                                 h3: a(href='http://bit.ly/clementlesne-cert-google-1') Google, Digital Active
 
-            article.content__sub
+            article.content--vertical__sub
                 header
                     h2 Distinction
-                table.table-data
+                table
                     tbody
                         tr
-                            td.table-data__left
+                            td
                                 h4 2017
-                            td: div.table-data__right
+                            td: div
                                 h3: a(href='https://www.engagement.fr/wp-content/uploads/2017/11/Liste-des-candidats-admis-automne-2017.pdf') Lauréat, Institut de l'Engagement
 
     div(class='7u')
-        section.content
+        section.content.content--vertical
             header
                 h2 Formation
-            table.table-data
+            table
                 tbody
                     tr
-                        td.table-data__left
-                            h4
-                                | 2015 - 2017
-                        td: div.table-data__right
+                        td: h4
+                            | 2015-2017
+                            br
+                            | (2 ans)
+                        td: div
                             h3 IUT Informatique
-                            .table-data__right__content
+                            div
                                 ul
                                     li Institut Universitaire de Technologie du Havre
                     tr
-                        td.table-data__left
-                            h4 2015
-                        td: div.table-data__right
-                            h3 BAC Scientifique option Informatique et Sciences du Numérique
-                            .table-data__right__content
+                        td: h4 2015
+                        td: div
+                            h3 BAC Scientifique spécialité Informatique et Sciences du Numérique
+                            div
                                 ul
                                     li Lycée Assomption, Rennes
 
-        section.content
+        section.content.content--vertical
             header
                 h2 Divers
-            table.table-data
+            table
                 tbody
                     tr
-                        td.table-data__left
-                            h4 Passions
-                        td: div.table-data__right
+                        td: h4 Passions
+                        td: div
                             h3
                                 | Equitation (galop 6, bénévolat),
                                 | Lectures scientifiques &amp; presse internationale
                     tr
-                        td.table-data__left
-                            h4 Sports
-                        td: div.table-data__right
-                            h3 Natation: nageur confirmé (1x par semaine), Basketball
+                        td: h4 Sports
+                        td: div
+                            h3 Natation (nageur confirmé, 1x par semaine)
                     tr
-                        td.table-data__left
-                            h4 Brevets
-                        td: div.table-data__right
+                        td: h4 Brevets
+                        td: div
                             h3 Permis B, PSC1

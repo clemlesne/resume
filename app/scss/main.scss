@@ -10,6 +10,7 @@
   grid: ( gutters: $content__margin $content__margin )
 ));
 
+@import "utils/functions";
 @import "utils/snippets";
 @import "utils/shadows";
 

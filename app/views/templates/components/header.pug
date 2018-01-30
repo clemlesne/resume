@@ -3,7 +3,7 @@
     .header__container
 
         aside#header__image--head.header__image.header__image--head
-            img(src='img/header__head.jpg?v=@@version', alt="Clément Lesné photo's")
+            img(src='img/head-v2.jpg?v=@@version', alt="Clément Lesné photo's")
 
         .header__main
             .header__main__top
@@ -29,6 +29,6 @@
                             a(target='_blank', href='https://twitter.com/ClementLesne')
                                 span.fab.fa-twitter
                                 span @ClementLesne
-            aside.header__main__bottom: h3 !{headerMainBottom}
+            aside.header__main__bottom: h3= headerMainBottom
 
         block header__image
