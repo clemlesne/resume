@@ -343,7 +343,7 @@ $content--horizontal__indicator--height: $content--horizontal__indicator--width 
 
     > td {
       &:first-child {
-        width: calc(100% *(3/12));
+        width: (100% * (3 / 12));
       }
     }
   }
@@ -415,9 +415,12 @@ $content--horizontal__indicator--height: $content--horizontal__indicator--width 
         }
 
         &:last-child {
-          @include rem(margin-top, $content--padding / 2);
 
-          margin-bottom: 50%;
+          > div {
+            @include rem(margin-top, $content--padding / 2);
+
+            margin-bottom: 30%;
+          }
         }
       }
     }
@@ -443,12 +446,14 @@ $content--horizontal__indicator--height: $content--horizontal__indicator--width 
         }
 
         &:last-child {
-          @include rem(margin-bottom, $content--padding / 2);
-
-          margin-top: calc(50% + (1rem + #{$content--padding}) / 2);
-          margin-top: calc(50% + (#{(1rem + rem($content--padding)) / 2}));
-
           transform: translateX(-42.85714%);
+
+          > div {
+            @include rem(margin-bottom, $content--padding / 2);
+
+            margin-top: calc(30% + (1rem + #{$content--padding}) / 2);
+            margin-top: calc(30% + #{(1rem + rem($content--padding)) / 2});
+          }
         }
       }
     }
@@ -565,7 +570,10 @@ $content--horizontal__indicator--height: $content--horizontal__indicator--width 
 
     position: absolute;
     top: 25%;
+
     width: fit-content;
+    width: -moz-max-content;
+    max-width: 100%;
 
     display: inline-flex;
 
