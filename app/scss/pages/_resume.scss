@@ -356,7 +356,157 @@ $content--horizontal__date--height: $typography__h4--line-height;
   }
 }
 
+%content--horizontal__item__tr--top {
+  flex-direction: column;
+  justify-content: flex-start;
+
+  transform: translateY(50%);
+
+  &:before {
+    @include rem(top, - $content--horizontal__indicator--width / 2);
+  }
+
+  > td {
+    &:first-child {
+      @include rem(top, $content--padding / 2 + $content--horizontal__indicator__sub--height);
+    }
+
+    &:not(:first-child) {
+      > div {
+        @include rem(margin-top, $content--padding + $content--horizontal__date--height + $content--horizontal__indicator__sub--height);
+
+        margin-bottom: 33.33333%;
+      }
+    }
+  }
+}
+
+%content--horizontal__item__tr--bottom {
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+
+  transform: translateY(-50%);
+
+  &:before {
+    @include rem(bottom, - $content--horizontal__indicator--width / 2);
+  }
+
+  > td {
+    &:first-child {
+      @include rem(bottom, $content--padding / 2 + $content--horizontal__indicator__sub--height);
+    }
+
+    &:not(:first-child) {
+      > div {
+        @include rem(margin-bottom, $content--padding + $content--horizontal__date--height + $content--horizontal__indicator__sub--height);
+
+        margin-top: calc(33.33333% + (1rem + #{$content--padding}) / 2);
+        margin-top: calc(33.33333% + #{(1rem + rem($content--padding)) / 2});
+      }
+    }
+  }
+}
+
+%content--horizontal__item__tr--2n1 {
+  > td {
+    &:not(:first-child) {
+      transform: translateX(-42.85714%);
+    }
+  }
+}
+
+%content--horizontal__item--top-bottom {
+  tbody {
+    tr {
+      &:first-child {
+        &:after {
+          @extend %border-radius-small-tl;
+        }
+      }
+
+      &:last-child {
+        &:after {
+          @extend %border-radius-small-br;
+        }
+      }
+
+      &:not(:first-child):not(:last-child) {
+        &:nth-child(2n) {
+          &:after {
+            @extend %border-radius-small-b;
+          }
+        }
+
+        &:nth-child(2n+1) {
+          &:after {
+            @extend %border-radius-small-t;
+          }
+        }
+      }
+
+      &:nth-child(2n) {
+        @extend %content--horizontal__item__tr--top;
+      }
+
+      &:nth-child(2n+1) {
+        @extend %content--horizontal__item__tr--2n1;
+        @extend %content--horizontal__item__tr--bottom;
+      }
+    }
+  }
+}
+
+%content--horizontal__item--bottom-top {
+  tbody {
+    tr {
+      &:first-child {
+        &:after {
+          @extend %border-radius-small-bl;
+        }
+      }
+
+      &:last-child {
+        &:after {
+          @extend %border-radius-small-tr;
+        }
+      }
+
+      &:not(:first-child):not(:last-child) {
+        &:nth-child(2n) {
+          &:after {
+            @extend %border-radius-small-t;
+          }
+        }
+
+        &:nth-child(2n+1) {
+          &:after {
+            @extend %border-radius-small-b;
+          }
+        }
+      }
+
+      &:nth-child(2n) {
+        @extend %content--horizontal__item__tr--bottom;
+      }
+
+      &:nth-child(2n+1) {
+        @extend %content--horizontal__item__tr--2n1;
+        @extend %content--horizontal__item__tr--top;
+      }
+    }
+  }
+}
+
 .content--horizontal {
+
+  &.content--horizontal--order-inverse {
+    @extend %content--horizontal__item--bottom-top;
+  }
+
+  &:not(.content--horizontal--order-inverse) {
+    @extend %content--horizontal__item--top-bottom;
+  }
+
   tbody {
     display: flex;
     flex-direction: row-reverse;
@@ -389,20 +539,12 @@ $content--horizontal__date--height: $typography__h4--line-height;
         > td:first-child {
           right: 0;
         }
-
-        &:after {
-          @extend %border-radius-small-tl;
-        }
       }
 
       &:last-child {
         &:after,
         > td:first-child {
           left: 0;
-        }
-
-        &:after {
-          @extend %border-radius-small-br;
         }
       }
 
@@ -422,18 +564,6 @@ $content--horizontal__date--height: $typography__h4--line-height;
 
           width: calc(var(--indicator_width_current) - #{$content--horizontal__indicator__sub--margin-horizontal * 1});
           width: calc(var(--indicator_width_current) - #{rem($content--horizontal__indicator__sub--margin-horizontal * 1)});
-        }
-
-        &:nth-child(2n) {
-          &:after {
-            @extend %border-radius-small-b;
-          }
-        }
-
-        &:nth-child(2n+1) {
-          &:after {
-            @extend %border-radius-small-t;
-          }
         }
       }
 
@@ -455,59 +585,6 @@ $content--horizontal__date--height: $typography__h4--line-height;
         width: 100%;
 
         background: $content--horizontal__indicator--bg;
-      }
-
-      &:nth-child(2n) {
-        flex-direction: column;
-        justify-content: flex-start;
-
-        transform: translateY(50%);
-
-        &:before {
-          @include rem(top, - $content--horizontal__indicator--width / 2);
-        }
-
-        > td {
-          &:first-child {
-            @include rem(top, $content--padding / 2 + $content--horizontal__indicator__sub--height);
-          }
-
-          &:not(:first-child) {
-            > div {
-              @include rem(margin-top, $content--padding + $content--horizontal__date--height + $content--horizontal__indicator__sub--height);
-
-              margin-bottom: 33.33333%;
-            }
-          }
-        }
-      }
-
-      &:nth-child(2n+1) {
-        flex-direction: column-reverse;
-        justify-content: flex-start;
-
-        transform: translateY(-50%);
-
-        &:before {
-          @include rem(bottom, - $content--horizontal__indicator--width / 2);
-        }
-
-        > td {
-          &:first-child {
-            @include rem(bottom, $content--padding / 2 + $content--horizontal__indicator__sub--height);
-          }
-
-          &:not(:first-child) {
-            transform: translateX(-42.85714%);
-
-            > div {
-              @include rem(margin-bottom, $content--padding + $content--horizontal__date--height + $content--horizontal__indicator__sub--height);
-
-              margin-top: calc(33.33333% + (1rem + #{$content--padding}) / 2);
-              margin-top: calc(33.33333% + #{(1rem + rem($content--padding)) / 2});
-            }
-          }
-        }
       }
 
       > td {

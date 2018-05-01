@@ -51,7 +51,11 @@
 }
 
 %border-radius-small-tl {
-  @include border-radius(8px 0 0 / 4px 0 0);
+  @include border-radius(8px 0 0 0 / 4px 0 0 0);
+}
+
+%border-radius-small-tr {
+  @include border-radius(0 8px 0 0 / 0 4px 0 0);
 }
 
 %border-radius-small-b {
@@ -60,6 +64,10 @@
 
 %border-radius-small-br {
   @include border-radius(0 0 8px 0 / 0 0 4px 0);
+}
+
+%border-radius-small-bl {
+  @include border-radius(0 0 0 8px / 0 0 0 4px);
 }
 
 /**
