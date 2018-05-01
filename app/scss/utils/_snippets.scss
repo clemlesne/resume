@@ -42,8 +42,24 @@
   @include transition(none);
 }
 
-%border-radius {
-  @include border-radius(3px);
+%border-radius-large {
+  @include border-radius(4px);
+}
+
+%border-radius-small-t {
+  @include border-radius(8px 8px 0 0 / 4px 4px 0 0);
+}
+
+%border-radius-small-tl {
+  @include border-radius(8px 0 0 / 4px 0 0);
+}
+
+%border-radius-small-b {
+  @include border-radius(0 0 8px 8px / 0 0 4px 4px);
+}
+
+%border-radius-small-br {
+  @include border-radius(0 0 8px 0 / 0 0 4px 0);
 }
 
 /**

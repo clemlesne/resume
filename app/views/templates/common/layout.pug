@@ -8,7 +8,7 @@ html(lang='fr-FR')
         meta(name='viewport', content='width=device-width, initial-scale=1')
 
         title LESNÉ &middot; Résumé !{headerTitle}
-        meta(name='author', content='Clément Lesné <clement@clementlesne.xyz> (https://clementlesne.xyz/)')
+        meta(name='author', content='Clément Lesné <clement@lesne.pro> (https://clement.lesne.pro/)')
         meta(name='description', content="Clément Lesné's resumé")
 
         link(rel='profile', href='http://gmpg.org/xfn/11')
@@ -31,15 +31,13 @@ html(lang='fr-FR')
                         .row
                             block content
 
-                .container.container--footer(class=qrcodeIsLeft ? 'container--footer--left' : 'container--footer--right')
-                    span.container--footer__qrcode
-                        figure: img(src='img/qrcode.svg?v=@@version')
+                .container.container--footer(class=footerIsLeft ? 'container--footer--left' : 'container--footer--right')
+                    if qrcodeVisible
+                        span.container--footer__qrcode
+                            span Mon profil
+                            figure: img(src='img/qrcode.svg?v=@@version')
+                    if footerVersionVisible
                         span
-                            span.fas.fa-long-arrow-alt-left
-                            span.fas.fa-long-arrow-alt-right
-                            | &nbsp;Scannez ce code pour en savoir plus !
-                    span
-                        if footerVersion
                             p v@@version
 
         span(style="display:none;")
@@ -66,7 +64,7 @@ html(lang='fr-FR')
             script.
                 WebFontConfig = {
                     google: {
-                        families: ['Average:400', 'Kalam:400'],
+                        families: ['Average:400', 'Roboto:400,400i', 'Kalam:400']
                     },
                     timeout: 5000,
                     events: false

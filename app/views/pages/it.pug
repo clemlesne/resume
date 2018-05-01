@@ -3,8 +3,9 @@ extend ../templates/common/layout
 block vars
     - var headerTitle = 'informatique'
     - var headerMainBottom = "Entrepreneur, autodidacte, passionné, j'ai déjà réalisé de nombreux projets digitaux."
-    - var footerVersion = true
-    - var qrcodeIsLeft = false
+    - var footerVersionVisible = true
+    - var footerIsLeft = false
+    - var qrcodeVisible = true
 
 block header__image
     aside.header__image.header__image--aside
@@ -101,7 +102,7 @@ block content
                         td: h4 2017 (en cours)
                         td: div
                             h3
-                                figure: span: a(href='https://www.enseignementsup-recherche.gouv.fr', target='_blank'): img(src='img/structures/mesri.jpg?version=@@version')
+                                figure: span: a(href='https://www.enseignementsup-recherche.gouv.fr', target='_blank'): img(src='img/structures/meneser.jpg?version=@@version')
                                 span Membre de la Commission Pédagogique Nationale Informatique / Réseau IUT
 
     div(class='5u')

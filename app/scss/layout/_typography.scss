@@ -1,6 +1,8 @@
 $typography--color: #212121;
 $typography__headers--color: #000;
 $typography__selection--color: #cccccc;
+$typography__h4--size: 14px;
+$typography__h4--line-height: 14px;
 
 ::selection {
   background: rgba($typography__selection--color, .45);
@@ -10,18 +12,24 @@ $typography__selection--color: #cccccc;
   background: rgba($typography__selection--color, .45);
 }
 
-%font--base {
+%font--headings {
   font-family: 'Average', serif;
   letter-spacing: .1px;
 }
 
-%font--second {
+%font--base {
+  @extend %font--headings;
+  //font-family: 'Roboto', sans-serif;
+  //letter-spacing: 0;
+}
+
+%font--extra {
   font-family: 'Kalam', serif;
   letter-spacing: 0;
 }
 
 body {
-  @extend %font--base;
+   @extend %font--base;
 
   @include rem(font-size, 11px);
 
@@ -34,6 +42,15 @@ small {
   @include rem(margin, 0 4px);
   @include rem(font-size, 15px);
   @include rem(line-height, 10px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %font--headings;
 }
 
 h1,
@@ -59,6 +76,6 @@ h3 {
 }
 
 h4 {
-  @include rem(font-size, 14px);
-  @include rem(line-height, 14px);
+  @include rem(font-size, $typography__h4--size);
+  @include rem(line-height, $typography__h4--line-height);
 }
