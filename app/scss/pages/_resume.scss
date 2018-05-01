@@ -29,6 +29,8 @@ $content--horizontal__indicator__sub--width: 48px;
 $content--horizontal__indicator__sub--height: 4px;
 $content--horizontal__indicator__sub--margin-horizontal: $content--horizontal__indicator__sub--height;
 $content--horizontal__date--height: $typography__h4--line-height;
+$content--horizontal__arrow--size-base: $content--horizontal__indicator--width + $content--horizontal__indicator__sub--height * 2;
+$content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base * .866;
 
 .resume {
   width: calc(21.0cm + #{$resume__view--margin} *2);
@@ -143,6 +145,7 @@ $content--horizontal__date--height: $typography__h4--line-height;
 
 .header__main__top {
   display: flex;
+
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: flex-end;
@@ -150,11 +153,11 @@ $content--horizontal__date--height: $typography__h4--line-height;
 
 .header__main__top__details__container-0 {
   display: flex;
+
   align-items: center;
   justify-content: center;
   flex-direction: row;
-
-  @include rem(margin-left, 56px);
+  flex-grow: 1;
 
   * {
     @include rem(font-size, 11px);
@@ -417,6 +420,12 @@ $content--horizontal__date--height: $typography__h4--line-height;
 
 %content--horizontal__item--top-bottom {
   tbody {
+    &:after {
+      // center the el relatively to the current left stroke
+      transform: translateY(calc(-50% - #{($content--horizontal__indicator__sub--height - $content--horizontal__indicator--width) / 2}));
+      transform: translateY(calc(-50% - #{rem(($content--horizontal__indicator__sub--height - $content--horizontal__indicator--width) / 2)}));
+    }
+
     tr {
       &:first-child {
         &:after {
@@ -458,6 +467,12 @@ $content--horizontal__date--height: $typography__h4--line-height;
 
 %content--horizontal__item--bottom-top {
   tbody {
+    &:after {
+      // center the el relatively to the current left stroke
+      transform: translateY(calc(-50% + #{($content--horizontal__indicator__sub--height - $content--horizontal__indicator--width) / 2}));
+      transform: translateY(calc(-50% + #{rem(($content--horizontal__indicator__sub--height - $content--horizontal__indicator--width) / 2)}));
+    }
+
     tr {
       &:first-child {
         &:after {
@@ -508,9 +523,25 @@ $content--horizontal__date--height: $typography__h4--line-height;
   }
 
   tbody {
+    position: relative;
     display: flex;
+
     flex-direction: row-reverse;
     align-self: stretch;
+
+    // right arrow
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 0;
+      height: 0;
+
+      top: 50%;
+      border-top: $content--horizontal__arrow--size-real solid transparent;
+      border-bottom: $content--horizontal__arrow--size-real solid transparent;
+      border-left: $content--horizontal__arrow--size-real solid $content--horizontal__indicator--bg;
+    }
 
     tr {
       --cell-width: calc(100% / var(--child_count));
@@ -525,18 +556,22 @@ $content--horizontal__date--height: $typography__h4--line-height;
       flex-grow: 1;
       flex-basis: 0;
 
-      &:first-child,
-      &:last-child {
+      &:first-child {
+        &:before {
+          @include rem(right, $content--horizontal__arrow--size-real);
+        }
+
         &:after,
         > td:first-child {
-          width: calc(var(--indicator_width_current) - #{$content--horizontal__indicator__sub--margin-horizontal * .5});
-          width: calc(var(--indicator_width_current) - #{rem($content--horizontal__indicator__sub--margin-horizontal * .5)});
+          @include rem(right, $content--horizontal__arrow--size-real);
+
+          width: calc(var(--indicator_width_current) - #{$content--horizontal__indicator__sub--margin-horizontal * .5 + $content--horizontal__arrow--size-real});
+          width: calc(var(--indicator_width_current) - #{rem($content--horizontal__indicator__sub--margin-horizontal * .5 + $content--horizontal__arrow--size-real)});
         }
       }
 
-      &:first-child {
-        &:after,
-        > td:first-child {
+      &:not(:first-child) {
+        &:before {
           right: 0;
         }
       }
@@ -544,6 +579,9 @@ $content--horizontal__date--height: $typography__h4--line-height;
       &:last-child {
         &:after,
         > td:first-child {
+          width: calc(var(--indicator_width_current) - #{$content--horizontal__indicator__sub--margin-horizontal * .5});
+          width: calc(var(--indicator_width_current) - #{rem($content--horizontal__indicator__sub--margin-horizontal * .5)});
+
           left: 0;
         }
       }
@@ -582,7 +620,6 @@ $content--horizontal__date--height: $typography__h4--line-height;
         content: '';
         position: absolute;
         left: 0;
-        width: 100%;
 
         background: $content--horizontal__indicator--bg;
       }
