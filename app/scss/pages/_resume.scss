@@ -200,6 +200,7 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
 
 .header__main__bottom {
   @include rem(margin-top, 12px);
+  @include rem(margin-right, 12px);
 
   letter-spacing: 0;
 }

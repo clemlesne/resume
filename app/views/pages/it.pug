@@ -1,11 +1,11 @@
 extend ../templates/common/layout
 
 block vars
-    - var headerTitle = 'informatique'
-    - var headerMainBottom = "Entrepreneur, autodidacte, passionné, j'ai déjà réalisé de nombreux projets digitaux."
+    - var headerTitle = 'Digital'
+    - var headerMainBottom = "Nombreuses expériences dans le numérique, en entreprise et dans l'environnement associatif, je souhaite me professionnaliser par un diplôme prestigieux et un environnement dynamique."
     - var footerVersionVisible = true
     - var footerIsLeft = false
-    - var qrcodeVisible = true
+    - var qrcodeVisible = false
 
 block header__image
     aside.header__image.header__image--aside
@@ -13,74 +13,60 @@ block header__image
 
 block content
     div(class='12u')
-        section.content.content--horizontal
+        section.content.content--vertical
             header
                 h2 Expériences professionnelles
             table
-                tbody
-                    tr
-                        td: h4 2017 (1 mois)
+                tbody(style="--child_count:4;")
+                    tr(style="--indicator_weight:3;")
+                        td: h4 mars 2018 à auj.
                         td: div
-                            h3 Accompagnement à l'expression de besoins
+                            h3
+                                figure: span: a(href='https://www.asi.fr', target='_blank'): img(src='img/structures/asi.png?version=@@version')
+                                span Développeur informatique, Agence ASI, Rennes
+                            div
+                                ul
+                                    li Réalisation d’applications mobiles Android ;
+                                    li
+                                        | Clients&nbsp;
+                                        em ARKEA
+                                        | &nbsp;et&nbsp;
+                                        em GROUPAMA
+                                        | &nbsp;;
+                                    li Equipe de 7 personnes.
+                    tr(style="--indicator_weight:3;--indicator_left:3;")
+                        td: h4 oct. à déc. 2017
+                        td: div
+                            h3 Accompagnement à l'expression de besoins, Le Havre
                             div
                                 ul
                                     li Application de monnaie virtuelle.
                     tr
-                        td: h4 2016 (janv. à mars)
+                        td: h4 juill. à août 2016
+                        td: div
+                            h3 Chargé de communication, Laboratoire Alzheimer, University of Minnesota Twin Cities
+                            div
+                                ul
+                                    li Conduite du plan de communication numérique, web et social (Facebook, Twitter et LinkedIn) ;
+                                    li Refonte du site internet et des sites sociaux.
+                    tr(style="--indicator_weight:3;--indicator_left:6;")
+                        td: h4 janv. à mars 2016
                         td: div
                             h3
                                 figure: span: a(href='https://www.cunninghamlindsey.com/global', target='_blank'): img(src='img/structures/cunningham-lindsey.png?version=@@version')
-                                span Application d'audit pour la compagnie d'assurance Cunningham Lindsey
+                                span Application d'audit, Cunningham Lindsey, Rennes
                             div
                                 ul
                                     li Aide au développement de l'application ;
                                     li Discussion du cahier des charges.
-                    tr
-                        td: h4 2015 (en cours)
+                    tr(style="--indicator_weight:3;")
+                        td: h4 août. 2015 à mars 2018
                         td: div
-                            h3
-                                figure: span: a(href='https://clementlesne.xyz', target='_blank'): img(src='img/structures/ecl.png?version=@@version')
-                                span Entrepreneur web et marketing digital
+                            h3 Entrepreneur web et marketing digital, Le Havre
                             div
                                 ul
                                     li Mise en place de solutions web (Node.js, PHP, JEE) et audit de communication internet/externe ;
                                     li Hébergement des solutions cloud et/ou dédié.
-                    tr
-                        td: h4 2013 - 2015
-                        td: div
-                            h3
-                                figure: span: img(src='img/structures/intercraft.png?version=@@version')
-                                span Serveur de jeu communautaire Minecraft
-                            div
-                                ul
-                                    li Equipe de 4 pers., ~200 joueurs actifs, développeur full-stack ;
-                                    li Administrateur système de trois serveurs dédiés.
-
-    div(class='12u')
-        section.content.content--vertical
-            header
-                h2 Projets personnels
-            table
-                tbody
-                    tr
-                        td: h4 2016 (juill. à août)
-                        td: div
-                            h3
-                                figure: span: a(href='https://thelesnelab.org', target='_blank'): img(src='img/structures/thelesnelab.png?version=@@version')
-                                span Site web et communication du laboratoire universitaire de recherche Américain spécialisé sur Alzheimer
-                            div
-                                ul
-                                    li
-                                        | Séjour de deux mois à Minneapolis (
-                                        em University of Minnesota Twin Cities
-                                        | ).
-                    tr
-                        td: h4 2015 (6 mois)
-                        td: div
-                            h3 Projet de spécialité BAC Informatique et Sciences du Numérique
-                            div
-                                ul
-                                    li Développement d’un système de gestion d’absence JEE/JSF.
 
     div(class='12u')
         section.content.content--vertical
@@ -89,35 +75,39 @@ block content
             table
                 tbody
                     tr
-                        td: h4 2018 (juill. à févr.)
-                        td: div
-                            h3
-                                figure: span: a(href='http://ligue76.fr', target='_blank'): img(src='img/structures/ligue76.png?version=@@version')
-                                span Service Civique à la Ligue de l'Enseignement de Seine-Maritime
-                            div
-                                ul
-                                    li Travail autour du dispositif Junior Association : rencontres, formation, promotion, 20 ans du réseau ;
-                                    li Promotion de la citoyenneté dans les établissements.
-                    tr
-                        td: h4 2017 (en cours)
+                        td: h4 avr. 2017 à auj.
                         td: div
                             h3
                                 figure: span: a(href='https://www.enseignementsup-recherche.gouv.fr', target='_blank'): img(src='img/structures/meneser.jpg?version=@@version')
-                                span Membre de la Commission Pédagogique Nationale Informatique / Réseau IUT
+                                span Membre collège étudiant, Commission Pédagogique Nationale spécialités "Informatique" et "Statistique et informatique décisionnelle", Ministère de l'enseignement supérieur et de la recherche, Paris
+                            div
+                                ul
+                                    li Audit des établissements (modalités d'enseignement, relations professionnelles et internationales) ;
+                                    li Actualisation des Programmes Pédagogiques Nationaux.
+                    tr
+                        td: h4 juill. 2017 à févr. 2018
+                        td: div
+                            h3 Chargé de projet, Ligue de l'Enseignement de Seine-Maritime, Le Havre
+                            div
+                                ul
+                                    li
+                                        | Accompagnement de projets culturels de jeunesse dans le cadre du&nbsp;
+                                        em Service Civique
+                                        | .
+
 
     div(class='5u')
         section.content.content--vertical
             article.content--vertical__sub.content--vertical__sub--skills
                 header
                     h2 Compétences
-
                 table
                     tbody
                         tr
                             td
                                 h4 Qualités
                             td: div
-                                p Organisation de projet, Analyse de système, Gestion des risques, Vérification de sources, Synthèse
+                                p Organisation de projet, Analyse de système, Gestion des risques, Synthèse
                         tr
                             td
                                 h4 Langages
@@ -125,19 +115,19 @@ block content
                                 p JAVA/JEE/JSF, HTML5/CSS3, ES6-7, Google AMP, Bash
                         tr
                             td
-                                h4 Middlewares
+                                h4 Médiateurs
                             td: div
-                                p NGINX, AWS, JSF, JBoss, Symfony, MySQL, MongoDB
+                                p NGINX, AWS, JSF, JBoss, Symfony, MySQL, MongoDB, 
                         tr
                             td
-                                h4 OSs
+                                h4 Systèmes
                             td: div
-                                p Linux (Debian), Windows
+                                p Linux (Debian), Windows, Android Plateform, AWS, GCP
                         tr
                             td
                                 h4 Langues
                             td: div
-                                p Anglais (B2), Espagnol
+                                p Anglais (B2+), Espagnol
 
             article.content--vertical__sub
                 header
@@ -146,15 +136,23 @@ block content
                     tbody
                         tr
                             td
+                                h4
+                                    | 2018
+                                    br
+                                    | (en cours)
+                            td: div
+                                h3 Amazon, AWS Solutions Architect, Certified Associate
+                        tr
+                            td
                                 h4 2016
                             td: div
-                                h3: a(href='http://bit.ly/clementlesne-cert-oracle-1') Oracle Certified Associate, Java SE 8 Programmer
+                                h3: a(href='http://bit.ly/clementlesne-cert-oracle-1') Oracle, Java SE 8 Programmer, Certified Associate
                         tr
                             td
                                 h4 2016
                             td: div
                                 h3: a(href='http://bit.ly/clementlesne-cert-google-1') Google, Digital Active
-
+            
             article.content--vertical__sub
                 header
                     h2 Distinction
@@ -173,10 +171,7 @@ block content
             table
                 tbody
                     tr
-                        td: h4
-                            | 2015-2017
-                            br
-                            | (2 ans)
+                        td: h4 2015-2017
                         td: div
                             h3 IUT Informatique
                             div
