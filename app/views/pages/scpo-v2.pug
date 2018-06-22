@@ -1,0 +1,181 @@
+extend ../templates/common/layout
+
+block vars
+    - var headerTitle = 'Sciences Po 2018-2023'
+    - var headerMainBottom = "Nombreuses expériences dans le numérique, en entreprise et dans l'environnement associatif, je souhaite intégrer Sciences Po afin de travailler, à terme, autour de la stratégie de projets digitaux et ses impacts sociaux-économiques."
+    - var footerVersionVisible = false
+    - var footerIsLeft = true
+    - var qrcodeVisible = false
+
+block header__image
+
+block content
+    div(class='12u')
+        section.content.content--vertical
+            header
+                h2 Expériences professionnelles
+            table
+                tbody
+                    tr
+                        td: h4 mars 2018 à auj.
+                        td: div
+                            h3
+                                figure: span: a(href='https://www.asi.fr', target='_blank'): img(src='img/structures/asi.png?version=@@version')
+                                span Développeur informatique, Agence ASI, Rennes
+                            div
+                                ul
+                                    li Réalisation d’applications mobiles Android ;
+                                    li
+                                        | Clients&nbsp;
+                                        em ARKEA
+                                        | &nbsp;et&nbsp;
+                                        em GROUPAMA
+                                        | &nbsp;;
+                                    li Equipe de 7 personnes.
+                    tr
+                        td: h4 juill. 2017 à févr. 2018
+                        td: div
+                            h3 Chargé de projet, Ligue de l'Enseignement de Seine-Maritime, Le Havre
+                            div
+                                ul
+                                    li
+                                        | Développement du dispositif Junior Association dans le cadre du&nbsp;
+                                        em Service Civique
+                                        | &nbsp;;
+                                    li Accompagnement de projets culturels de jeunesse ;
+                                    li Interventions dans les établissements scolaires.
+                    tr
+                        td: h4 juill. à oct. 2017
+                        td: div
+                            h3
+                                figure: span: a(href='http://www.nomad-hotels.com/16-NOMAD-LE-HAVRE.htm', target='_blank'): img(src='img/structures/nomad.png?version=@@version')
+                                span Responsable des ventes, Hôtel NOMAD, Le Havre
+                            div
+                                ul
+                                    li Equipes de 2 à 6 collaborateurs, charge de 106 chambres ;
+                                    li Accueil des clients internationaux (80% clientèle) ;
+                                    li Tenue de la réception, services de bar et de table, renseignements touristiques.
+                    tr
+                        td: h4 juill. à août 2016
+                        td: div
+                            h3 Chargé de communication, Laboratoire Alzheimer, University of Minnesota Twin Cities
+                            div
+                                ul
+                                    li Conduite du plan de communication numérique, web et social (Facebook, Twitter et LinkedIn) ;
+                                    li Refonte du site internet et des sites sociaux.
+
+    div(class='12u')
+        section.content.content--vertical
+            header
+                h2 Expériences associatives et culturelles
+            table
+                tbody
+                    tr
+                        td: h4 avr. 2017 à auj.
+                        td: div
+                            h3
+                                figure: span: a(href='https://www.enseignementsup-recherche.gouv.fr', target='_blank'): img(src='img/structures/meneser.jpg?version=@@version')
+                                span Membre collège étudiant, Commission Pédagogique Nationale spécialités "Informatique" et "Statistique et informatique décisionnelle", Ministère de l'enseignement supérieur et de la recherche, Paris
+                            div
+                                ul
+                                    li Audit des établissements (modalités d'enseignement et d'évaluation, intégration sociale, relations professionnelles et internationales) ;
+                                    li Actualisation des Programmes Pédagogiques Nationaux.
+                    tr
+                        td: h4 mars à sept. 2017
+                        td: div
+                            h3 Membre collège étudiant, CA de la Communauté d'Universités et Établissements de Normandie, Caen
+                            div
+                                ul
+                                    li Faire valoir les intérêts et les politiques générales de la FAGE et des Fédérations d'Associations de Jeunesse Normandes ;
+                                    li Synthétiser des motions et contributions pour orienter les objectifs politiques de l'instance.
+                    tr
+                        td: h4 déc. 2016 à sept. 2017
+                        td: div
+                            h3 Président, Fédération des Associations Étudiantes, Le Havre
+                            div
+                                ul
+                                    li Management d'un bureau de 14 collaborateurs ;
+                                    li Coordination des projets de la structure (notamment formations, événements culturels et inclusifs) ;
+                                    li Réseau adhérent de 13 associations ;
+                                    li Représentant auprès des Universités, lycées et institutions publiques.
+
+    div(class='5u')
+        section.content.content--vertical
+            article.content--vertical__sub
+                header
+                    h2 Compétences
+
+                table
+                    tbody
+                        tr
+                            td
+                                h4 Qualités
+                            td: div: h3 Organisation de projet, Planification, Vérification de sources, Synthèse
+                        tr
+                            td
+                                h4 Langues
+                            td: div: h3 Anglais (B2+), Espagnol
+
+            article.content--vertical__sub
+                header
+                    h2 Distinction
+                table
+                    tbody
+                        tr
+                            td
+                                h4 2017
+                            td: div: h3
+                                a(href='https://www.engagement.fr/wp-content/uploads/2017/11/Liste-des-candidats-admis-automne-2017.pdf') Lauréat, Institut de l'Engagement
+
+            article.content--vertical__sub
+                header
+                    h2 Certifications professionelles
+                table
+                    tbody
+                        tr
+                            td
+                                h4 2016
+                            td: div: h3
+                                a(href='http://bit.ly/clementlesne-cert-oracle-1') Oracle Certified Associate, Java SE 8 Programmer
+                        tr
+                            td
+                                h4 2016
+                            td: div: h3
+                                a(href='http://bit.ly/clementlesne-cert-google-1') Google, Digital Active
+
+    div(class='7u')
+        section.content.content--vertical
+            header
+                h2 Formation
+            table
+                tbody
+                    tr
+                        td: h4 2017
+                        td: div
+                            h3 IUT Informatique
+                            div: ul
+                                    li Institut Universitaire de Technologie du Havre
+                    tr
+                        td: h4 2015
+                        td: div
+                            h3 BAC Scientifique spécialité Informatique et Sciences du Numérique
+                            div: ul
+                            li Lycée Assomption, Rennes
+
+        section.content.content--vertical
+            header
+                h2 Divers
+            table
+                tbody
+                    tr
+                        td: h4 Passion
+                        td: div: h3
+                            | Equitation (galop 6, bénévolat)
+                    tr
+                        td: h4 Intérêts
+                        td: div: h3
+                            | Lectures scientifiques &amp; presse internationale,
+                            | Natation (nageur confirmé, 1 fois par semaine)
+                    tr
+                        td: h4 Brevets
+                        td: div: h3 Permis B, PSC1
