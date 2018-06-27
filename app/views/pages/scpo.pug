@@ -2,7 +2,7 @@ extend ../templates/common/layout
 
 block vars
     - var headerTitle = 'Sciences Po 2018-2023'
-    - var headerMainBottom = "Entrepreneur engagé du numérique"
+    - var headerMainBottom = "Nombreuses expériences dans le numérique, en entreprise et dans l'environnement associatif, je souhaite intégrer Sciences Po afin de travailler, à terme, autour de la stratégie de projets digitaux et ses impacts sociaux-économiques."
     - var footerVersionVisible = false
     - var footerIsLeft = true
     - var qrcodeVisible = false
@@ -11,13 +11,13 @@ block header__image
 
 block content
     div(class='12u')
-        section.content.content--horizontal.content--horizontal--order-inverse
+        section.content.content--vertical
             header
                 h2 Expériences professionnelles
             table
-                tbody(style="--child_count:4;")
-                    tr(style="--indicator_weight:2;")
-                        td: h4 mars 2018 à auj.
+                tbody
+                    tr
+                        td: h4 mars à juill. 2018
                         td: div
                             h3
                                 figure: span: a(href='https://www.asi.fr', target='_blank'): img(src='img/structures/asi.png?version=@@version')
@@ -32,12 +32,10 @@ block content
                                         em GROUPAMA
                                         | &nbsp;;
                                     li Equipe de 7 personnes.
-                    tr(style="--indicator_weight:5;--indicator_left:2;")
+                    tr
                         td: h4 juill. 2017 à févr. 2018
                         td: div
-                            h3
-                                figure: span: a(href='http://ligue76.fr', target='_blank'): img(src='img/structures/ligue76.png?version=@@version')
-                                span Chargé de projet, Ligue de l'Enseignement de Seine-Maritime, Le Havre
+                            h3 Chargé de projet, Ligue de l'Enseignement de Seine-Maritime, Le Havre
                             div
                                 ul
                                     li
@@ -46,7 +44,7 @@ block content
                                         | &nbsp;;
                                     li Accompagnement de projets culturels de jeunesse ;
                                     li Interventions dans les établissements scolaires.
-                    tr(style="--indicator_weight:3;--indicator_left:7;")
+                    tr
                         td: h4 juill. à oct. 2017
                         td: div
                             h3
@@ -57,12 +55,10 @@ block content
                                     li Equipes de 2 à 6 collaborateurs, charge de 106 chambres ;
                                     li Accueil des clients internationaux (80% clientèle) ;
                                     li Tenue de la réception, services de bar et de table, renseignements touristiques.
-                    tr(style="--indicator_weight:2;")
+                    tr
                         td: h4 juill. à août 2016
                         td: div
-                            h3
-                                figure: span: a(href='https://thelesnelab.org', target='_blank'): img(src='img/structures/thelesnelab.png?version=@@version')
-                                span Chargé de communication, Laboratoire Alzheimer, University of Minnesota Twin Cities
+                            h3 Chargé de communication, Laboratoire Alzheimer, University of Minnesota Twin Cities
                             div
                                 ul
                                     li Conduite du plan de communication numérique, web et social (Facebook, Twitter et LinkedIn) ;
@@ -87,9 +83,7 @@ block content
                     tr
                         td: h4 mars à sept. 2017
                         td: div
-                            h3
-                                figure: span: a(href='http://www.normandie-univ.fr', target='_blank'): img(src='img/structures/comue-normandie.png?version=@@version')
-                                span Membre collège étudiant, CA de la Communauté d'Universités et Établissements de Normandie, Caen
+                            h3 Membre collège étudiant, CA de la Communauté d'Universités et Établissements de Normandie, Caen
                             div
                                 ul
                                     li Faire valoir les intérêts et les politiques générales de la FAGE et des Fédérations d'Associations de Jeunesse Normandes ;
@@ -97,9 +91,7 @@ block content
                     tr
                         td: h4 déc. 2016 à sept. 2017
                         td: div
-                            h3
-                                figure: span: a(href='https://fedlh.fr', target='_blank'): img(src='img/structures/fedlh.png?version=@@version')
-                                span Président, Fédération des Associations Étudiantes, Le Havre
+                            h3 Président, Fédération des Associations Étudiantes, Le Havre
                             div
                                 ul
                                     li Management d'un bureau de 14 collaborateurs ;
@@ -158,7 +150,7 @@ block content
             table
                 tbody
                     tr
-                        td: h4 2017
+                        td: h4 2015-2017
                         td: div
                             h3 IUT Informatique
                             div: ul
