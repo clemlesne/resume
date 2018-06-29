@@ -69,6 +69,28 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
   position: relative;
 }
 
+.container--header--palantir {
+  background: url('../img/palantir-header-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &,
+  a,
+  h1,
+  h2 {
+    color: #fff;
+  }
+
+  .header__main__top__details__container-1--left {
+    border-right-color: rgba(#fff, .4);
+  }
+
+  .header__canvas {
+    opacity: .5;
+  }
+}
+
 .header__canvas {
   position: absolute;
   top: 0;
