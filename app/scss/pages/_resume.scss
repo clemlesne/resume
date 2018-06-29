@@ -28,7 +28,7 @@ $content--horizontal__indicator--width: 2px;
 $content--horizontal__indicator__sub--width: 48px;
 $content--horizontal__indicator__sub--height: 4px;
 $content--horizontal__indicator__sub--margin-horizontal: $content--horizontal__indicator__sub--height;
-$content--horizontal__date--height: $typography__h4--line-height;
+$content--horizontal__date--height: $typography__h4--size;
 $content--horizontal__arrow--size-base: $content--horizontal__indicator--width + $content--horizontal__indicator__sub--height * 2;
 $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base * .866;
 
@@ -223,8 +223,6 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
 .header__main__bottom {
   @include rem(margin-top, 12px);
   @include rem(margin-right, 12px);
-
-  letter-spacing: 0;
 }
 
 .container--content {

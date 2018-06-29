@@ -2,10 +2,11 @@ extend ../templates/common/layout
 
 block vars
     - var headerTitle = 'Digital'
-    - var headerMainBottom = "Expériences dans le numérique, en entreprise et dans l'environnement associatif, je souhaite me professionnaliser dans la stratégie appliquée au digital."
+    - var headerMainBottom = "Autodidacte, entrepreneur, passionné par le digital et l'informatique, je souhaite trouver une entreprise pour débuter une alternance dans un contexte novateur et dynamique début septembre 2018 ou début janvier 2019."
     - var footerVersionVisible = true
     - var footerIsLeft = false
     - var qrcodeVisible = false
+    - var headerClass = ''
 
 block header__image
     aside.header__image.header__image--aside
@@ -15,58 +16,26 @@ block content
     div(class='12u')
         section.content.content--vertical
             header
-                h2 Expériences professionnelles
+                h2 Expériences professionnelles et compétences techniques
             table
-                tbody(style="--child_count:4;")
-                    tr(style="--indicator_weight:3;")
+                tbody
+                    tr
                         td: h4 mars à juill. 2018
                         td: div
                             h3
                                 figure: span: a(href='https://www.asi.fr', target='_blank'): img(src='img/structures/asi.png?version=@@version')
-                                span Développeur informatique, Agence ASI, Rennes
+                                span Analyste, Agence ASI, Rennes
                             div
                                 ul
-                                    li Réalisation d’applications mobiles Android (équipe de 7 personnes) ;
+                                    li Développement d'un environnement embarqué Android en micro-services, avec outils de synchronisations et applicatioons mobiles ;
+                                    li Applications temps réel, ROM et matériel customs.
                                     li
                                         | Clients&nbsp;
                                         em ARKEA
                                         | &nbsp;et&nbsp;
                                         em GROUPAMA
                                         | &nbsp;;
-                                    li Applications temps réel, modification ROM Android.
-                    tr
-                        td: h4 juill. à août 2016
-                        td: div
-                            h3 Chargé de communication, Laboratoire Alzheimer, University of Minnesota Twin Cities
-                            div
-                                ul
-                                    li Conduite du plan de communication numérique, web et social (Facebook, Twitter et LinkedIn) ;
-                                    li Refonte du site internet et des sites sociaux.
-                    tr(style="--indicator_weight:3;--indicator_left:6;")
-                        td: h4 janv. à mars 2016
-                        td: div
-                            h3
-                                figure: span: a(href='https://www.cunninghamlindsey.com/global', target='_blank'): img(src='img/structures/cunningham-lindsey.png?version=@@version')
-                                span Application d'audit, Cunningham Lindsey, Rennes
-                            div
-                                ul
-                                    li Aide au développement de l'application ;
-                                    li Discussion du cahier des charges.
-                    tr(style="--indicator_weight:3;")
-                        td: h4 août. 2015 à mars 2018
-                        td: div
-                            h3 Entrepreneur web et marketing digital, Le Havre
-                            div
-                                ul
-                                    li Mise en place de solutions web et audit de communication externe ;
-                                    li Hébergement des solutions cloud et/ou dédié.
-
-    div(class='12u')
-        section.content.content--vertical
-            header
-                h2 Projets associatifs et culturels
-            table
-                tbody
+                            p: em Environnement technique : JAVA 8, Bash, Amazon EC2, MySQL, Amazon S3, Amazon DynamoDB, MQTT, Spring, Hibernate, JBoss, Android 4.4.2-8, ButterKnife, Dagger, Linux (Debian)
                     tr
                         td: h4 avr. 2017 à auj.
                         td: div
@@ -78,58 +47,47 @@ block content
                                     li Audit des établissements (modalités d'enseignement, relations professionnelles et internationales) ;
                                     li Actualisation des Programmes Pédagogiques Nationaux.
                     tr
-                        td: h4 juill. 2017 à févr. 2018
+                        td: h4 juill. à août 2016
                         td: div
-                            h3 Chargé de projet, Ligue de l'Enseignement de Seine-Maritime, Le Havre
+                            h3 Chargé de mission digital et communication, Laboratoire Alzheimer, University of Minnesota Twin Cities, USA
                             div
                                 ul
-                                    li
-                                        | Accompagnement de projets culturels et formation de jeunes dans le cadre du&nbsp;
-                                        em Service Civique
-                                        | .
+                                    li Développement d'un site internet performant (Google AMP compliant) et accessible ;
+                                    li Mise en place du plan de communication numérique, web et social.
+                            p: em Environnement technique : PHP 7, NGINX, MySQL, Redis, Google AMP, WordPress, Mac OS, Linux (Debian)
                     tr
-                        td: h4 déc. 2016 à sept. 2017
+                        td: h4 janv. à mars 2016
                         td: div
-                            h3 Président, Fédération des Associations de Jeunesse, Le Havre
+                            h3
+                                figure: span: a(href='https://www.cunninghamlindsey.com/global', target='_blank'): img(src='img/structures/cunningham-lindsey.png?version=@@version')
+                                span Développeur full-stack, Cunningham Lindsey, Rennes
                             div
                                 ul
-                                    li Management d'un bureau de 14 collaborateurs, réseau de 13 associations ;
-                                    li Représentant auprès des Universités, lycées et institutions publiques.
-
+                                    li Participation à la création d'une application d'audit interne ;
+                                    li Discussion du cahier des charges.
+                            p: em Environnement technique : JAVA, JEE/JSF, SCSS, HTML5/CSS3, MySQL, AWS, JavaScript, Hyper-V, Linux (Debian), Windows
+                    tr
+                        td: h4 août. 2015 à mars 2018
+                        td: div
+                            h3 Entrepreneur web et marketing digital, Le Havre
+                            div
+                                ul
+                                    li Mise en place de solutions web (JAVA/JEE, Node.js, PHP) et audit de communication externe ;
+                                    li Hébergement des solutions cloud AWS/GCP et/ou dédié.
+                            p: em Environnement technique : JEE, NGINX, SCSS, HTML5/CSS3, Java, Hibernate, JSF, MySQL, JBoss, JavaScript, Elasticsearch, Redis, Linux (Debian)
+                    tr
+                        td: h4 févr. 2012 à oct. 2014
+                        td: div
+                            h3  Serveur de jeu communautaire Minecraft, France
+                            div
+                                ul
+                                    li Création d'une plateforme de gamers Minecraft avec services free-to-play, ~200 joueurs actifs 18h/24 ;
+                                    li Front PHP (Symfony 2.3), middlewares REST, launcher Java Swing, 4 serveurs dédiés OVH.
+                            p: em Environnement technique : MySQL, PHP, Symfony, Doctrine, NGINX, HTML5/CSS3, Redis, Amazon S3, Linux
 
     div(class='5u')
         section.content.content--vertical
-            article.content--vertical__sub.content--vertical__sub--skills
-                header
-                    h2 Compétences
-                table
-                    tbody
-                        tr
-                            td
-                                h4 Attitudes
-                            td: div
-                                p Organisation de projet, Analyse de système, Gestion des risques, Synthèse
-                        tr
-                            td
-                                h4 Langages
-                            td: div
-                                p JAVA/JEE/JSF, HTML5/CSS3, JavaScript ES6-7, Google AMP, Bash
-                        tr
-                            td
-                                h4 Médiateurs
-                            td: div
-                                p NGINX, JBoss, Symfony, MySQL, MongoDB, Redis, Elasticsearch, MQTT
-                        tr
-                            td
-                                h4 Systèmes
-                            td: div
-                                p Linux (Debian), Windows, Android Plateform, AWS, GCP
-                        tr
-                            td
-                                h4 Langues
-                            td: div
-                                p Anglais (B2+), Espagnol
-
+            
             article.content--vertical__sub
                 header
                     h2 Certifications
@@ -141,18 +99,18 @@ block content
                                     | 2018
                                     br
                                     | (en cours)
-                            td: div
-                                h3 Amazon, AWS Solutions Architect, Certified Associate
+                            td
+                                div: h3 Amazon, AWS Solutions Architect, Certified Associate
                         tr
                             td
                                 h4 2016
-                            td: div
-                                h3 Oracle, Java SE 8 Programmer, Certified Associate
+                            td
+                                div: h3 Oracle, Java SE 8 Programmer, Certified Associate
                         tr
                             td
                                 h4 2016
-                            td: div
-                                h3 Google, Digital Active
+                            td
+                                div: h3 Google, Digital Active
             
             article.content--vertical__sub
                 header
@@ -162,8 +120,25 @@ block content
                         tr
                             td
                                 h4 2017
-                            td: div
-                                h3: a(href='https://www.engagement.fr/wp-content/uploads/2017/11/Liste-des-candidats-admis-automne-2017.pdf') Lauréat, Institut de l'Engagement
+                            td
+                                div: h3
+                                    a(href='https://www.engagement.fr/wp-content/uploads/2017/11/Liste-des-candidats-admis-automne-2017.pdf', target='_blank') Lauréat
+                                    | ,&nbsp;
+                                    a(href='https://www.engagement.fr/qui-sommes-nous/role-et-missions/', target='_blank') Institut de l'Engagement
+            
+            article.content--vertical__sub.content--vertical__sub--skills
+                header
+                    h2 Compétences transverses
+                table
+                    tbody
+                        tr
+                            td
+                                h4 Attitudes
+                            td: div: h3 Proactivif, respectueux, positif
+                        tr
+                            td
+                                h4 Langues
+                            td: div: h3 Anglais (B2+), Espagnol
 
     div(class='7u')
         section.content.content--vertical

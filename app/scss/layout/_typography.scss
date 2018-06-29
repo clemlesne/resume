@@ -1,8 +1,9 @@
 $typography--color: #212121;
 $typography__headers--color: #000;
 $typography__selection--color: #cccccc;
+$typography__h1--size: 26px;
+$typography__h2--size: 16px;
 $typography__h4--size: 14px;
-$typography__h4--line-height: 14px;
 
 ::selection {
   background: rgba($typography__selection--color, .45);
@@ -13,19 +14,14 @@ $typography__h4--line-height: 14px;
 }
 
 %font--headings {
-  font-family: 'Average', serif;
+  font-family: 'Sanchez', serif;
   letter-spacing: .1px;
 }
 
 %font--base {
-  @extend %font--headings;
-  //font-family: 'Roboto', sans-serif;
-  //letter-spacing: 0;
-}
-
-%font--extra {
-  font-family: 'Kalam', serif;
-  letter-spacing: 0;
+  font-family: 'Average', serif;
+  letter-spacing: .1px;
+  line-height: 1.3;
 }
 
 body {
@@ -45,11 +41,7 @@ small {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   @extend %font--headings;
 }
 
@@ -59,23 +51,24 @@ h2 {
 }
 
 h1 {
-  @include rem(font-size, 26px);
-  @include rem(line-height, 20px);
+  @include rem(font-size, $typography__h1--size);
+  @include rem(line-height, $typography__h1--size);
 
   font-weight: 700;
+  letter-spacing: 2px;
 }
 
 h2 {
-  @include rem(font-size, 16px);
+  @include rem(font-size, $typography__h2--size);
+  @include rem(line-height, $typography__h2--size);
 
   font-weight: 700;
 }
 
 h3 {
-  @include rem(font-size, 14px);
+  @include rem(font-size, $typography__h4--size);
 }
 
 h4 {
   @include rem(font-size, $typography__h4--size);
-  @include rem(line-height, $typography__h4--line-height);
 }
