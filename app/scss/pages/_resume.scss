@@ -52,6 +52,7 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
   height: 29.7cm;
   width: 21.0cm;
   box-sizing: content-box;
+  overflow: hidden;
 
   background: $resume__content--bg;
   position: relative;
@@ -69,12 +70,7 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
   position: relative;
 }
 
-.container--header--palantir {
-  background: url('../img/palantir-header-bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-
+%container--header--bright {
   &,
   a,
   h1,
@@ -91,19 +87,55 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
   }
 }
 
+.page--palantir {
+
+  .container--header {
+    @extend %container--header--bright;
+
+    background: url('../img/palantir-header-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+.page--axa {
+
+  .container--header {
+    @extend %container--header--bright;
+    
+    background: #00008f; // #ff1721
+
+    &:before {
+      content: '';
+
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+
+      transform-origin: top;
+      transform: rotateZ(45deg) scaleY(2) translateY(-25%);
+      left: 2.8cm;
+      width: 1cm;
+      background: #ff1721;
+    }
+  }
+}
+
 .header__canvas {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 0;
+  z-index: 1;
 }
 
 .header__container {
   @include rem(margin, 0 $content--padding $header__padding--bottom);
 
-  z-index: 1;
+  z-index: 2;
   position: relative;
 
   display: flex;
@@ -113,7 +145,7 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
 }
 
 .header__image {
-  @extend %shadow-2;
+  @extend %shadow-3;
 
   flex-shrink: 0;
 
@@ -368,7 +400,7 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
 
     > td {
       &:first-child {
-        width: (100% * (3 / 12));
+        width: 24%;
       }
     }
   }
