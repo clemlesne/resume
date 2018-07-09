@@ -2,7 +2,7 @@ extend ../templates/common/layout
 
 block vars
     - var headerTitle = 'Digital'
-    - var headerMainBottom = "Autodidacte, entrepreneur, passionné par le digital et l'informatique, je souhaite trouver une entreprise pour débuter une alternance dans un contexte novateur et dynamique début septembre 2018 ou début janvier 2019."
+    - var headerMainBottom = "Autodidacte, entrepreneur, passionné par le digital et l'informatique, je souhaite évoluer dans un contexte novateur et dynamique."
     - var footerVersionVisible = true
     - var footerIsLeft = false
     - var qrcodeVisible = false
@@ -49,10 +49,13 @@ block content
                     tr
                         td: h4 juill. à août 2016
                         td: div
-                            h3 Chargé de mission digital et communication, Laboratoire Alzheimer, University of Minnesota Twin Cities, USA
+                            h3
+                                span Chargé de mission digital et communication, Laboratoire Alzheimer,&nbsp;
+                                a(href='https://twin-cities.umn.edu', target='_blank') University of Minnesota Twin Cities
+                                span , USA
                             div
                                 ul
-                                    li Développement d'un site internet performant (Google AMP compliant) et accessible ;
+                                    li: a(href='https://thelesnelab.org', target='_blank') Développement d'un site internet performant (Google AMP compliant) et accessible ;
                                     li Mise en place du plan de communication numérique, web et social.
                             p: em Environnement technique : PHP 7, NGINX, MySQL, Redis, Google AMP, WordPress, Mac OS, Linux (Debian)
                     tr
