@@ -104,7 +104,7 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
   .container--header {
     @extend %container--header--bright;
     
-    background: #00008f; // #ff1721
+    background: #00008f;
 
     &:before {
       content: '';
@@ -120,6 +120,28 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
       width: 1cm;
       background: #ff1721;
     }
+  }
+}
+
+.page--amazon {
+
+  .container--header {
+    @extend %container--header--bright;
+    
+    background: #232f3e;
+
+    h1 {
+      color: #f08804;
+    }
+  }
+}
+
+.page--cesi-alternance {
+
+  .container--header {
+    @extend %container--header--bright;
+
+    background: #009c9e;
   }
 }
 
