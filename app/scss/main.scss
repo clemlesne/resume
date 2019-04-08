@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-// Compass
-// doc: http://compass-style.org/
-@import "compass";
-
 @import "variables";
 @import "vendors/skel";
 @include skel-layout((

@@ -1,9 +1,14 @@
+@mixin rem($property, $size) {
+  #{$property}: #{$size};
+  #{$property}: #{rem($size)}rem;
+}
+
 @mixin transition-in-engine($types) {
-  @include transition($types 120ms linear)
+  transition: $types 120ms linear;
 }
 
 @mixin transition-out-engine($types) {
-  @include transition($types 280ms ease-out)
+  transition: $types 280ms ease-out;
 }
 
 @mixin transition-in {
@@ -15,11 +20,11 @@
 }
 
 @mixin transition-long-in {
-  @include transition(all 520ms linear);
+  transition: all 520ms linear;
 }
 
 @mixin transition-long-out {
-  @include transition(all 680ms ease-out);
+  transition: all 680ms ease-out;
 }
 
 %transition-in {
@@ -39,42 +44,42 @@
 }
 
 %transition-none {
-  @include transition(none);
+  transition: none;
 }
 
 %border-radius-large {
-  @include border-radius(4px);
+  border-radius: 4px;
 }
 
 %border-radius-small-t {
-  @include border-radius(8px 8px 0 0 / 4px 4px 0 0);
+  border-radius: 8px 8px 0 0 / 4px 4px 0 0;
 }
 
 %border-radius-small-tl {
-  @include border-radius(8px 0 0 0 / 4px 0 0 0);
+  border-radius: 8px 0 0 0 / 4px 0 0 0;
 }
 
 %border-radius-small-tr {
-  @include border-radius(0 8px 0 0 / 0 4px 0 0);
+  border-radius: 0 8px 0 0 / 0 4px 0 0;
 }
 
 %border-radius-small-b {
-  @include border-radius(0 0 8px 8px / 0 0 4px 4px);
+  border-radius: 0 0 8px 8px / 0 0 4px 4px;
 }
 
 %border-radius-small-br {
-  @include border-radius(0 0 8px 0 / 0 0 4px 0);
+  border-radius: 0 0 8px 0 / 0 0 4px 0;
 }
 
 %border-radius-small-bl {
-  @include border-radius(0 0 0 8px / 0 0 0 4px);
+  border-radius: 0 0 0 8px / 0 0 0 4px;
 }
 
 /**
 * Empêche la sélection d'un contenu par l'utilsiateur, affiche également un pointeur par défaut.
 */
 %disallow-select {
-  @include user-select(none);
+  user-select: none;
 
   -webkit-touch-callout: none;
   cursor: default;
@@ -113,5 +118,5 @@
 }
 
 %transition-responsive-global {
-  @include transition(all 220ms ease-in);
+  transition: all 220ms ease-in;
 }

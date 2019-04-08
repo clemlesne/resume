@@ -1,9 +1,9 @@
 @function px($size) {
-  @return convert-length($size, px);
+  @return $base__font-size * $size;
 }
 
 @function rem($size) {
-  @return convert-length($size, rem);
+  @return $size / $base__font-size;
 }
 
 /**
