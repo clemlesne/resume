@@ -28,7 +28,7 @@ $content--horizontal__indicator--width: 2px;
 $content--horizontal__indicator__sub--width: 48px;
 $content--horizontal__indicator__sub--height: 4px;
 $content--horizontal__indicator__sub--margin-horizontal: $content--horizontal__indicator__sub--height;
-$content--horizontal__date--height: $typography__h4--size;
+$content--horizontal__date--height: $typography__h3--size;
 $content--horizontal__arrow--size-base: $content--horizontal__indicator--width + $content--horizontal__indicator__sub--height * 2;
 $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base * .866;
 
@@ -167,8 +167,6 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
 }
 
 .header__image {
-  @extend %shadow-3;
-
   flex-shrink: 0;
 
   &,
@@ -180,10 +178,6 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
     width: auto;
     display: block;
   }
-}
-
-.header__image {
-  background: #fff;
 }
 
 .header__image--head {
@@ -206,7 +200,9 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
   }
 
   img {
-    height: 1.6cm;
+    @include rem(margin, 6px);
+
+    width: 2cm;
   }
 }
 
@@ -297,14 +293,13 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
 
 %content--style {
   @extend %border-radius-large;
-  @extend %shadow-1;
+  // @extend %shadow-1;
 
   @include rem(padding, $content--padding $content--padding);
 
   background: $content--bg;
-
-  //margin: -1px;
-  //border: 1px solid $resume__content--bg;
+  margin: -1px;
+  border: 1px solid $resume__content--bg;
 }
 
 .content {
@@ -346,8 +341,6 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
 
         h3 {
           position: relative;
-
-          line-height: 1.1;
 
           figure {
             display: inline-block;

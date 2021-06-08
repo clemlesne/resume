@@ -19,7 +19,6 @@
  */
 @function clamp($value, $min, $max) {
   @return if($value > $max, $max, if($value < $min, $min, $value));
-
 }
 
 /**
@@ -39,7 +38,6 @@ $imported-once-files: ();
 
   $imported-once-files: append($imported-once-files, $filename);
   @return true;
-
 }
 
 /**
@@ -64,5 +62,4 @@ $imported-once-files: ();
   }
 
   @return false;
-
 }

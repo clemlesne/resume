@@ -1,30 +1,29 @@
 .container.container--header#container--header
-    canvas#header__canvas.header__canvas
-    .header__container
+  canvas#header__canvas.header__canvas
+  .header__container
 
-        aside#header__image--head.header__image.header__image--head
-            img(src='img/head-v2.jpeg?v=@@version', alt="Clément Lesné photo's")
+    if !isPictureHide
+      aside#header__image--head.header__image.header__image--head
+        img(src='img/head-v2.jpg?v=@@version', alt="Clément Lesné photo's")
 
-        .header__main
-            .header__main__top
-                h1
-                    | Clément Lesné
-                    // small .xyz
-                .header__main__top__details__container-0
-                    .header__main__top__details__container-1.header__main__top__details__container-1--left
-                        div
-                            a(href='tel:+33649229043')
-                                span +33 (0)6 49 22 90 43
-                                span.fas.fa-phone
-                        div
-                            a(href='mailto:clement@lesne.pro')
-                                span clement@lesne.pro
-                                span.fas.fa-envelope
-                    .header__main__top__details__container-1.header__main__top__details__container-1--right
-                        div
-                            a(target='_blank', href='https://linkedin.com/in/clementlesne')
-                                span.fab.fa-linkedin
-                                span Clément Lesné
-            aside.header__main__bottom: h3= headerMainBottom
+    .header__main
+      .header__main__top
+        h1 Clément Lesné
+        .header__main__top__details__container-0
+          .header__main__top__details__container-1.header__main__top__details__container-1--left
+            div
+              a(href='tel:+33649229043')
+                span +33 (0)6 49 22 90 43
+                span.fas.fa-phone
+            div
+              a(href='mailto:clement@lesne.pro')
+                span clement@lesne.pro
+                span.fas.fa-envelope
+          .header__main__top__details__container-1.header__main__top__details__container-1--right
+            div
+              a(target='_blank', href='https://linkedin.com/in/clementlesne')
+                span.fab.fa-linkedin
+                span Clément Lesné
+      aside.header__main__bottom: h3= headerMainBottom
 
-        block header__image
+    block header__image

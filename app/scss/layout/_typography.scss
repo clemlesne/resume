@@ -1,9 +1,10 @@
 $typography--color: #212121;
 $typography__headers--color: #000;
 $typography__selection--color: #cccccc;
-$typography__h1--size: 26px;
-$typography__h2--size: 16px;
-$typography__h4--size: 14px;
+$typography__small--size: 4/5;
+$typography__h1--size: 12/5;
+$typography__h2--size: 7/5;
+$typography__h3--size: 6/5;
 
 ::selection {
   background: rgba($typography__selection--color, .45);
@@ -25,7 +26,7 @@ $typography__h4--size: 14px;
 }
 
 body {
-   @extend %font--base;
+  @extend %font--base;
 
   @include rem(font-size, 11px);
 
@@ -35,9 +36,7 @@ body {
 }
 
 small {
-  @include rem(margin, 0 4px);
-  @include rem(font-size, 15px);
-  @include rem(line-height, 10px);
+  font-size: calc(100% * #{$typography__small--size});
 }
 
 h1,
@@ -51,24 +50,22 @@ h2 {
 }
 
 h1 {
-  @include rem(font-size, $typography__h1--size);
-  @include rem(line-height, $typography__h1--size);
+  font-size: calc(100% * #{$typography__h1--size});
 
   font-weight: 700;
   letter-spacing: 2px;
 }
 
 h2 {
-  @include rem(font-size, $typography__h2--size);
-  @include rem(line-height, $typography__h2--size);
+  font-size: calc(100% * #{$typography__h2--size});
 
   font-weight: 700;
 }
 
 h3 {
-  @include rem(font-size, $typography__h4--size);
+  font-size: calc(100% * #{$typography__h3--size});
 }
 
 h4 {
-  @include rem(font-size, $typography__h4--size);
+  font-size: calc(100% * #{$typography__h3--size});
 }

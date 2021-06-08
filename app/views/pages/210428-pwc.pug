@@ -1,0 +1,187 @@
+extend ../templates/common/layout
+
+block vars
+  - var headerTitle = 'PwC'
+  - var headerMainBottom = "Self-taught, entrepreneur, in project management and digital strategy, I work at AXA's global IT department as Product Owner/Lead DevOps for a critical business line. I am open to Architect/Transformation positions to help clients get the most out of their business."
+  - var isFooterLeft = false
+  - var isQrcodeVisible = false
+  - var isPictureHide = true
+
+block header__image
+  aside.header__image.header__image--aside
+    img(src='img/cert-aws-architect.png?v=@@version')
+
+block content
+  div(class='12u')
+    section.content.content--vertical
+      header
+        h2 Experience &amp; technical background
+      table
+        tbody
+          tr
+            td: h4
+              div Oct 2018 – Present
+              small Paris, France
+            td: div
+              h3
+                figure: span: a(href='https://axa.com', target='_blank'): img(src='img/structures/axa.svg?version=@@version')
+                span Tech Lead DevOps &amp; Product Owner for a cloud AWS/OpenShift data management solution, AXA Group Operations
+              div
+                ul
+                  li Tech lead platform automation on two continents with a DevSecOps and &amp; GitOps approach, in Agile Scrum with a 3 people' team (EU &amp; Asia, 99.997% uptime SLA);
+                  li ITIL product management (road-map, work plan, performances impacts across multiple information systems) with international customers (includes: Germany, Japan, Spain, UK, USA);
+                  li Redesign micro-service' system with machine learning-based monitoring;
+                  li Transformation project management (documentation, customer integration, target operating model).
+              p: em Technical background: Terraform, Helm, Jenkins, Jira, Office, Node.js, RHEL, Service Now, Elasticsearch stack, MarkLogic, Dynatrace, AWS, Thales Vormetric, Thales SafeNet, OWASP, Python, Lambda, SQS 
+          tr
+            td: h4
+              div Mar – Jul 2018
+              small Rennes, France
+            td: div
+              h3 Android developer, ASI Consulting
+              div
+                ul
+                  li Engineered in agile on AOSP android environment, with MQTT and real-time mobile applications;
+                  li Designed UI/UX components (included call centers, olderies &amp; millennials).
+              p: em Technical background: JAVA 8, bash, Amazon EC2, MySQL, Amazon S3, Amazon DynamoDB, MQTT, Spring, Hibernate, JBoss, Android AOSP, ButterKnife, Dagger, Linux (Debian), Jira, Confluence 
+          tr
+            td: h4
+              div Apr 2017 – May 2019
+              small Paris, France
+            td: div
+              h3
+                figure: span: a(href='https://www.enseignementsup-recherche.gouv.fr', target='_blank'): img(src='img/structures/meneser.jpg?version=@@version')
+                span National university advisory group, member of the student college, Ministry of Higher Education and Research
+              div
+                ul
+                  li Audited institutions (teaching methods, professional networks and international relations);
+                  li Updated national programs.
+          tr
+            td: h4
+              div Jul – Aug 2016
+              small Minneapolis, MN, USA
+            td: div
+              h3
+                span Digital and communication project manager, Alzheimer's Laboratory,&nbsp;
+                a(href='https://twin-cities.umn.edu', target='_blank') University of Minnesota Twin Cities
+              div
+                ul
+                  li: a(href='https://lesnelab.org', target='_blank') Redesigned website and social sites;
+                  li Leaded the web communication plan (Facebook, Twitter and LinkedIn).
+              p: em Technical background: PHP 7, NGINX, MySQL, Redis, Google AMP, WordPress, Mac OS, Linux (Debian)
+          tr
+            td: h4
+              div Aug 2015 – Mar 2018
+              small Le Havre, France
+            td: div
+              h3 Web entrepreneur and digital marketing
+              div
+                ul
+                  li Implemented web solutions (JAVA/JEE, Node.js, PHP) and external communication audit;
+                  li Hosted cloud solutions on AWS/GCP and dedicated infrastructures.
+              p: em Technical background: JEE, NGINX, SCSS, HTML5/CSS3, Java, Hibernate, JSF, MySQL, JBoss, JavaScript, Elasticsearch, Redis, Linux (Debian), OWASP, Terraform, Docker, Kubernetes, Jira, Confluence, Agile
+          tr
+            td: h4
+              div Feb 2012 – Oct 2014
+              small Rennes, France
+            td: div
+              h3  Minecraft community game server
+              div
+                ul
+                  li Created a Minecraft gamer platform with free-to-play services, ~200 active players 18h/24 ;
+                  li PHP front-end (Symfony 2.3), REST middleware, Java Swing launcher, 4 dedicated cloud servers.
+              p: em Technical background : MySQL, PHP, Symfony, Doctrine, NGINX, HTML5/CSS3, Redis, Linux (Ubuntu), Git
+
+  div(class='5u')
+    section.content.content--vertical
+      
+      article.content--vertical__sub
+        header
+          h2 Certifications
+        table
+          tbody
+            tr
+              td
+                h4 2020
+              td
+                div: h3 Amazon, AWS Solutions Architect, Certified Associate
+            tr
+              td
+                h4 2016
+              td
+                div: h3 Oracle, Java SE 8 Programmer, Certified Associate
+                
+      article.content--vertical__sub
+        header
+          h2 Scores
+        table
+          tbody
+            tr
+              td
+                h4 2021
+              td
+                div: h3 TOEIC, 930 / 990
+      
+      article.content--vertical__sub
+        header
+          h2 Honor &amp; Award
+        table
+          tbody
+            tr
+              td
+                h4 2017
+              td
+                div: h3
+                  a(href='https://www.engagement.fr/wp-content/uploads/2017/11/Liste-des-candidats-admis-automne-2017.pdf', target='_blank') Laureate
+                  | ,&nbsp;
+                  a(href='https://www.engagement.fr/qui-sommes-nous/role-et-missions/', target='_blank') Institute of Engagement
+                div: ul
+                  li Detection &amp; young people accompaniment with high potential.
+
+  div(class='7u')
+    section.content.content--vertical
+      header
+        h2 Education
+      table
+        tbody
+          tr
+            td: h4
+              div 2018 – 2021
+              small Paris, France
+            td: div
+              h3 Manager in Information Systems
+              div
+                ul
+                  li RNCP title level 1 (bac +5) in apprenticeship with AXA
+                  li CESI Alternance
+          tr
+            td: h4
+              div 2015 – 2017
+              small Le Havre, France
+            td: div
+              h3 Degree in computer science
+              div
+                ul
+                  li University Institute of Technology
+          tr
+            td: h4
+              div 2015
+              small Rennes, France
+            td: div
+              h3 Baccalaureate with a specialization in Digital Sciences
+              div: ul
+                  li Assomption High School
+    
+      article.content--vertical__sub.content--vertical__sub--skills
+        header
+          h2 Transversal skills
+        table
+          tbody
+            tr
+              td
+                h4 Attitudes
+              td: div: h3 Proactive, benevolent, positive
+            tr
+              td
+                h4 Languages
+              td: div: h3 French (native), English (full professional), Spanish
