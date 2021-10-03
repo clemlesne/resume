@@ -4,11 +4,11 @@ const
     http = require('http'),
     glob = require('glob'),
     pug = require('gulp-pug'),
-    sass = require('gulp-sass'),
+    nodeSaas = require('node-sass'),
+    sass = require('gulp-sass')(nodeSaas),
     log = require('fancy-log'),
     babel = require('gulp-babel'),
     color = require('ansi-colors'),
-    uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     merge = require('merge-stream'),
     cleanCss = require('clean-css'),
@@ -16,7 +16,6 @@ const
     htmlmin = require('gulp-htmlmin'),
     replace = require('gulp-replace'),
     staticServer = require('node-static'),
-    responsive = require('gulp-responsive'),
     gulpCleanCss = require('gulp-clean-css'),
     replaceTask = require('gulp-replace-task'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -27,11 +26,8 @@ var paths = {
     templates_pages__test: 'app/views/pages/*.pug',
     templates_html__test: 'dist/**/*.html',
     templates_html__dist: 'dist',
-    images__test: 'app/img/**/*',
-    images_opt__test: 'app/img/opt/**/*.{jpg,png}',
-    images_opt__dist: 'dist/img',
-    images_raw__test: 'app/img/raw/**/*.{bmp,ico,jpg,png,svg,gif}',
-    images_raw__dist: 'dist/img',
+    images__test: 'app/img/**/*.{bmp,ico,jpg,png,svg,gif}',
+    images__dist: 'dist/img',
     css__test: 'app/css/**/*.css',
     css__dist: 'dist/css',
     sass: 'app/scss',
@@ -60,38 +56,6 @@ gulp.task('js__app', () => {
         .pipe(babel({
             presets: [ '@babel/env' ],
         }))
-        .pipe(uglify({
-            warnings: false,
-            parse: {
-                html5_comments: false,
-            },
-            compress: {
-                sequences: 200,
-                unused: true,
-                properties: true,
-                drop_debugger: true,
-                conditionals: true,
-                comparisons: true,
-                evaluate: true,
-                booleans: true,
-                loops: true,
-                toplevel: true,
-                hoist_funs: true,
-                hoist_vars: true,
-                if_return: true,
-                join_vars: true,
-                collapse_vars: true,
-                reduce_vars: true,
-                negate_iife: true,
-                passes: 10,
-            },
-            output:  {
-                beautify: false,
-                webkit: true,
-                wrap_iife: true,
-            },
-            ie8: false,
-        }))
         .pipe(concat(paths.js_app__dist_filename))
         .on('error', function($err) { log(color.red($err.message)); })
         .pipe(gulp.dest(paths.js_app__dist))
@@ -100,33 +64,12 @@ gulp.task('js__app', () => {
 
 gulp.task('js', gulp.parallel('js__app'));
 
-gulp.task('images__raw', () => {
-    return gulp.src(paths.images_raw__test)
+gulp.task('images', () => {
+    return gulp.src(paths.images__test)
         .on('error', function($err) { log(color.red($err.message)); })
-        .pipe(gulp.dest(paths.images_raw__dist))
+        .pipe(gulp.dest(paths.images__dist))
         .pipe(browserSync.stream());
 });
-
-gulp.task('images__opt', () => {
-    return gulp.src(paths.images_opt__test)
-        .pipe(responsive(
-            {
-                '**/*': [{
-                    width: 1024
-                }]
-            }, {
-                quality: 80,
-                compressionLevel: 9,
-                progressive: true,
-                withMetadata: false,
-                errorOnEnlargement: false,
-            }))
-        .on('error', function($err) { log(color.red($err.message)); })
-        .pipe(gulp.dest(paths.images_opt__dist))
-        .pipe(browserSync.stream());
-});
-
-gulp.task('images', gulp.parallel('images__raw', 'images__opt'));
 
 gulp.task('fonts__copy', () => {
     return gulp.src(paths.fonts__test)
@@ -161,7 +104,6 @@ gulp.task('css__compile', () => {
             ]
         }))
         .pipe(gulpCleanCss({
-            compatibility: 'ie9',
             advanced: true,
             roundingPrecision: 3,
         }))
@@ -273,7 +215,6 @@ gulp.task('compile-optimized', gulp.parallel('compile', () => {
                 }
 
                 var $cssOptimized = new cleanCss({
-                    compatibility: 'ie9',
                     level: {
                         2: {
                             roundingPrecision: 'all=3',
