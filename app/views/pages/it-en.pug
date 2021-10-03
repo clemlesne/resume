@@ -2,7 +2,7 @@ extend ../templates/common/layout
 
 block vars
   - var headerTitle = 'Digital'
-  - var headerMainBottom = "Self-taught, entrepreneur, in project management and digital strategy, I work at AXA's global IT department as Product Owner/Lead DevOps for a critical business line. I am open to Architect/Transformation positions to help clients get the most out of their business."
+  - var headerMainBottom = "Self-taught, entrepreneur, in project management and digital strategy, I work at AXA's global IT department as Cloud Delivery Officer. I am dedicated to help my clients get the most out of their business."
   - var isFooterLeft = false
   - var isQrcodeVisible = false
   - var isPictureHide = true
@@ -21,18 +21,32 @@ block content
         tbody
           tr
             td: h4
-              div Oct 2018 – Present
+              div Jun 2021 – Present
               small Paris, France
             td: div
               h3
                 figure: span: a(href='https://axa.com', target='_blank'): img(src='img/structures/axa.svg?version=@@version')
-                span Tech Lead DevOps &amp; Product Owner for a cloud AWS/OpenShift data management solution, AXA Group Operations
+                span Cloud Delivery Officer,&nbsp;
+                a(href='https://www.linkedin.com/company/axa-group-operations', target='_blank') AXA Group Operations
               div
                 ul
-                  li Tech lead platform automation on two continents with a DevSecOps and &amp; GitOps approaches, Agile Scrum, 3 people' team, 4 deployments per day, 99.997% uptime SLA;
-                  li Architected a big-data platform for data import-export, product distributed in serlf-service, serverless technologies, TB of highly sentitive data migrated;
-                  li ITIL product management (road-map, work plan, documentation, customer integration, target operating model, performances impacts across multiple information systems) with international customers;
-              p: em Technical background: Terraform, Helm, Jenkins, Jira, Office, Node.js, machine learning, RHEL, Service Now, NoSQL, Elasticsearch, MarkLogic, Dynatrace, Thales Vormetric, Thales SafeNet, OWASP, Python, AWS, SOPS 
+                  li Deliver the AWS &amp; Red Hat OpenShift projects inside the entity;
+                  li Identify technical requirements, architect application products using AWS and OpenShift technologies;
+                  li Build and maintain shared components for FinOps, DevSecOps and architecture best practices.
+          tr
+            td: h4
+              div Oct 2018 – Jun 2021
+              small Paris, France
+            td: div
+              h3
+                figure: span: a(href='https://axa.com', target='_blank'): img(src='img/structures/axa.svg?version=@@version')
+                span Tech Lead DevOps &amp; Product Owner for a cloud AWS/OpenShift data management solution,&nbsp;
+                a(href='https://www.linkedin.com/company/axa-group-operations', target='_blank') AXA Group Operations
+              div
+                ul
+                  li Leaded platform automation with a DevSecOps/GitOps, 4 deployments /day, 99.997% uptime;
+                  li ITIL product management with international customers;
+              p: em Technical background: OpenShift, AWS, Terraform, Helm, Jenkins, Jira, Office, Node.js, ML, RHEL, Service Now, NoSQL, Elasticsearch, MarkLogic, Dynatrace, Thales Vormetric, Thales SafeNet, OWASP, Python, SOPS
           tr
             td: h4
               div Mar – Jul 2018
@@ -51,7 +65,8 @@ block content
             td: div
               h3
                 figure: span: a(href='https://www.enseignementsup-recherche.gouv.fr', target='_blank'): img(src='img/structures/meneser.jpg?version=@@version')
-                span National university advisory group, member of the student college, Ministry of Higher Education and Research
+                span National university advisory group,&nbsp;
+                a(href='https://www.enseignementsup-recherche.gouv.fr', target='_blank') Institute of Engagement Ministry of Higher Education and Research
               div
                 ul
                   li Audited institutions (teaching methods, professional networks and international relations);
@@ -79,7 +94,7 @@ block content
                 ul
                   li Implemented web solutions (Java/JEE, Node.js, PHP) and external communication audit;
                   li Hosted cloud solutions on AWS/GCP and dedicated infrastructures.
-              p: em Technical background: JEE, NGINX, SCSS, HTML5/CSS3, Java, Hibernate, NoSQL, JSF, MySQL, JBoss, JavaScript, Elasticsearch, Redis, Linux (Debian), OWASP, Terraform, Docker, Kubernetes, Jira, Confluence, Agile, AWS, Google Cloud 
+              p: em Technical background: JEE, NGINX, SCSS, HTML5/CSS3, Java, Hibernate, NoSQL, JSF, MySQL, JBoss, JavaScript, Elasticsearch, Redis, Linux (Debian), OWASP, Terraform, Docker, Kubernetes, Jira, Confluence, Agile, AWS, Google Cloud
           tr
             td: h4
               div Feb 2012 – Oct 2014
@@ -90,16 +105,21 @@ block content
                 ul
                   li Managed the creation of a Minecraft gamer platform with free-to-play services, 2000 players ;
                   li Tech leading PHP web &amp; Java native front-ends, REST middlewares, federated accounts, 4 high-availability IaaS servers on OVH.
-              p: em Technical background : MySQL, PHP, Symfony, OAuth, Doctrine, NGINX, HTML5/CSS3, Redis, Linux (Ubuntu), OVH, Git
+              p: em Technical background : MySQL, PHP, Symfony, OAuth, Doctrine, NGINX, HTML5/CSS3, Redis, Linux, OVH, Git
 
   div(class='5u')
     section.content.content--vertical
-      
+
       article.content--vertical__sub
         header
-          h2 Certifications
+          h2 Scores &amp; Certifications
         table
           tbody
+            tr
+              td
+                h4 2021
+              td
+                div: h3 TOEIC, 930 / 990
             tr
               td
                 h4 2020
@@ -110,18 +130,7 @@ block content
                 h4 2016
               td
                 div: h3 Oracle, Java SE 8 Programmer, Certified Associate
-                
-      article.content--vertical__sub
-        header
-          h2 Scores
-        table
-          tbody
-            tr
-              td
-                h4 2021
-              td
-                div: h3 TOEIC, 930 / 990
-      
+
       article.content--vertical__sub
         header
           h2 Honor &amp; Award
@@ -140,27 +149,7 @@ block content
 
   div(class='7u')
     section.content.content--vertical
-      header
-        h2 Education
-      table
-        tbody
-          tr
-            td: h4
-              div 2018 – 2021
-              small Paris, France
-            td: div
-              h3 Manager in Information Systems
-              div
-                ul
-                  li RNCP title level 1 (bac +5) in apprenticeship with AXA
-                  li CESI Alternance
-          tr
-            td: h4
-              div 2015
-              small Rennes, France
-            td: div
-              h3 Baccalaureate in Digital Sciences
-    
+
       article.content--vertical__sub.content--vertical__sub--skills
         header
           h2 Transversal skills
@@ -174,3 +163,14 @@ block content
               td
                 h4 Languages
               td: div: h3 French (native), English (full professional), Spanish
+
+      article.content--vertical__sub
+        header
+          h2 Publications
+        table
+          tbody
+            tr
+              td
+                h4 2021
+              td
+                div: h3 Serverless computing in an organization: Does it lead to improved product time-to-market while maintaining asset security?
