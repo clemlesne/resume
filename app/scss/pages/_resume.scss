@@ -3,38 +3,38 @@ $color--4: #dedede;
 $color--5: #c3c8cd; // Pantone 428C
 $color--6: #fff;
 
-$resume--padding: 1cm;
-$resume__view--margin: 32px;
+$resume--padding: .75cm;
+$resume__view--height: 29.7cm;
+$resume__view--width: 21.0cm;
+$resume__view--margin: $content--padding * 3;
 $resume__header--bg: $color--1;
 $resume__content--bg: $color--4;
 $resume__footer--color: $color--5;
 
 $header__margin--v: $resume--padding;
 $header__padding--bottom: $resume--padding;
-$header__main__top__details__icon--margin-h: 7px;
-$header__main__top__details__container--padding: 12px;
-
+$header__main__top__details__icon--margin-h: $content--padding / 2;
+$header__main__top__details__container--padding: $content--padding;
 
 $container--header--bg: $resume__header--bg;
 $container__padding--v: $header__margin--v;
 $container__padding--h: $resume--padding;
 
 $content--bg: $color--6;
-$content--padding: 12px;
 $content__header--bg: $resume__content--bg;
 $content__header--margin: $content--padding;
 $content--horizontal__indicator--bg: $resume__header--bg;
 $content--horizontal__indicator--width: 2px;
-$content--horizontal__indicator__sub--width: 48px;
-$content--horizontal__indicator__sub--height: 4px;
+$content--horizontal__indicator__sub--width: $base__font-size * 3;
+$content--horizontal__indicator__sub--height: $content--horizontal__indicator--width * 2;
 $content--horizontal__indicator__sub--margin-horizontal: $content--horizontal__indicator__sub--height;
 $content--horizontal__date--height: $typography__h3--size;
 $content--horizontal__arrow--size-base: $content--horizontal__indicator--width + $content--horizontal__indicator__sub--height * 2;
-$content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base * .866;
+$content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base * (6 / 7);
 
 .resume {
-  width: calc(21.0cm + #{$resume__view--margin} *2);
-  height: 29.7cm;
+  width: calc(#{$resume__view--width} + #{$resume__view--margin} *2);
+  height: $resume__view--height;
 
   margin: 0 auto;
 }
@@ -49,8 +49,8 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
   align-items: stretch;
   justify-content: flex-start;
 
-  height: 29.7cm;
-  width: 21.0cm;
+  height: $resume__view--height;
+  width: $resume__view--width;
   box-sizing: content-box;
   overflow: hidden;
 
@@ -103,7 +103,7 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
 
   .container--header {
     @extend %container--header--bright;
-    
+
     background: #00008f;
 
     &:before {
@@ -127,7 +127,7 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
 
   .container--header {
     @extend %container--header--bright;
-    
+
     background: #232f3e;
 
     h1 {
@@ -181,7 +181,7 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
 }
 
 .header__image--head {
-  @include rem(margin-right, 16px);
+  @include rem(margin-right, $base__font-size);
 
   &,
   img {
@@ -352,7 +352,7 @@ $content--horizontal__arrow--size-real: $content--horizontal__arrow--size-base *
             span {
               display: inline-block;
               height: 100%;
-              
+
               padding-right: 17.66666%;
               width: fit-content;
             }
